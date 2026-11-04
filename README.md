@@ -1,6 +1,6 @@
 # How To Live Better (高性价比人生指南)
 
-Bản dịch tiếng Việt của cuốn sách hướng dẫn sống tính theo "đáng đồng tiền". Mỗi lời khuyên cho biết bạn bỏ ra gì (tiền, thời gian, sức lực, ý chí), đổi lại được gì (sống lâu hơn, đỡ tốn tiền, đỡ tốn thời gian, giữ được tự do), mức kiểm chứng A/B/C và nguồn gốc. Có 768 mục trong 34 chương.
+Bản dịch tiếng Việt của cuốn sách hướng dẫn sống tính theo "đáng đồng tiền". Mỗi lời khuyên cho biết bạn bỏ ra gì (tiền, thời gian, sức lực, ý chí), đổi lại được gì (sống lâu hơn, đỡ tốn tiền, đỡ tốn thời gian, giữ được tự do), mức kiểm chứng A/B/C và nguồn gốc. Có 772 mục trong 34 chương.
 
 ## 👉 [Đọc sách tại đây](https://khanhdoan4106.github.io/HowToLiveBetter/)
 
