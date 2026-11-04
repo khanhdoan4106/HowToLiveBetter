@@ -196,6 +196,15 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .card-h{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
 .card-h h3{margin:0;font-size:18px;line-height:28px;font-weight:600;letter-spacing:-.01em;flex:1;min-width:0;overflow-wrap:anywhere}
 .card-h .idx{color:var(--t3);font-size:14px;line-height:28px;font-variant-numeric:tabular-nums;min-width:22px}
+.card-h .mk{flex:none;display:inline-flex;align-items:center;justify-content:center;width:30px;height:28px;border-radius:8px;color:var(--t3);transition:color .2s,background .2s}
+.card-h .mk svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card-h .mk:hover{background:var(--bg-soft,rgba(127,127,127,.12));color:var(--t1)}
+.card-h .mk.save[aria-pressed="true"]{color:#d97706}
+.card-h .mk.save[aria-pressed="true"] svg{fill:currentColor}
+.card-h .mk.done[aria-pressed="true"]{color:#16a34a}
+.card.is-done .t{color:var(--t2)}
+.chip i{font-style:normal;opacity:.7;margin-left:4px;font-variant-numeric:tabular-nums}
+.mark-note{margin:6px 0 0;font-size:12px;line-height:18px;color:var(--t3)}
 .card-h .anchor{opacity:0;color:var(--brand-1);font-size:16px;line-height:28px;font-weight:500;transition:opacity .2s}
 .card:hover .anchor,.anchor:focus-visible{opacity:1}
 .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
@@ -314,6 +323,7 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
   .doc-head h1{font-size:26px;line-height:34px}
   .card{padding:18px 16px 14px;border-radius:10px}
   .card-h h3{font-size:16px;line-height:24px}
+  .card-h .mk{width:40px;height:40px;margin-top:-8px}
   .card-h .idx{line-height:24px}
   .human{padding:9px 12px;font-size:14px;margin-bottom:12px}
   .rows{grid-template-columns:1fr;gap:4px}
@@ -377,6 +387,15 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
       <button class="chip" data-v="女性" aria-pressed="false">Nữ</button>
       <button class="chip" data-v="无" aria-pressed="false">Không thuộc nhóm nào</button>
     </div>
+  </div>
+  <div class="group" id="g-mark">
+    <div class="gt">Đánh dấu của tôi <small>bấm ☆ để lưu, ✓ khi đã làm</small></div>
+    <div class="chips" data-dim="mark">
+      <button class="chip" data-v="saved" aria-pressed="false">Đã lưu<i>0</i></button>
+      <button class="chip" data-v="done" aria-pressed="false">Đã làm<i>0</i></button>
+      <button class="chip" data-v="undone" aria-pressed="false">Chưa làm<i>0</i></button>
+    </div>
+    <p class="mark-note">Chỉ lưu trên trình duyệt này. Việc bạn trả lời "đã làm" ở trang tự kiểm tra cũng được tính.</p>
   </div>
   <div class="group" id="g-upd" hidden>
     <div class="gt">Cập nhật gần đây <small>chỉ sửa câu chữ thì không tính</small></div>
@@ -1072,7 +1091,7 @@ function build(sections){
       const id = `e-${e.sec}-${e.n}`;
       const c = document.createElement('article'); c.className='card'; c.id = id;
       c.innerHTML = `
-        <div class="card-h"><span class="idx">${e.n}</span><h3 class="t"></h3><a class="anchor" href="#${id}" aria-label="Liên kết tới mục này">#</a></div>
+        <div class="card-h"><span class="idx">${e.n}</span><h3 class="t"></h3><a class="anchor" href="#${id}" aria-label="Liên kết tới mục này">#</a><button class="mk save" data-mk="saved" aria-pressed="false" aria-label="Lưu mục này" title="Lưu mục này"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg></button><button class="mk done" data-mk="done" aria-pressed="false" aria-label="Đánh dấu đã làm" title="Đánh dấu đã làm"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.7 2.7L16 9.8"/></svg></button></div>
         <div class="badges"></div>
         <p class="human"></p>
         <div class="rows">
@@ -1098,6 +1117,7 @@ function build(sections){
         add('upd', `${d}/${m} ${e.upd.kind === '新增' ? 'mới thêm' : 'đã sửa'}`);
         if (e.upd.fields) badges.lastChild.title = 'Lần này sửa: ' + e.upd.fields.join(', ');
       }
+      c.dataset.key = `${e.sec}-${e.n}`; paintMarks(c);
       block.appendChild(c);
       const card = {e, el:c, key:null, vis:false, f:{t:c.querySelector('.t'), cost:c.querySelector('.cost'), human:c.querySelector('.human'), gain:c.querySelector('.gain'), note:c.querySelector('.note'), src:c.querySelector('.src .body'), srcN:c.querySelector('.src summary .cnt'), details:c.querySelector('.src')}};
       renderCard(card, [], '');
@@ -1119,7 +1139,39 @@ function buildGlossary(){
 }
 
 /* ---------- 筛选状态 ---------- */
-const DIMS = ['sec','ratio','lens','grade','money','time','will','who','upd','days'];
+const DIMS = ['sec','ratio','lens','grade','money','time','will','who','upd','days','mark'];
+/* Đánh dấu của người đọc: lưu và đã làm. Chỉ ở trình duyệt này (localStorage), không gửi đi đâu.
+   Câu trả lời "đã làm" ở trang tự kiểm tra (selfcheck-v1, khóa "chương:mục[:vN]") cũng tính là đã làm,
+   trừ khi người đọc bỏ dấu ở đây (ghi false). */
+const MARK_STORE = 'hltb-marks-v1';
+const MARKS = { saved:{}, done:{} };
+try { Object.assign(MARKS, JSON.parse(localStorage.getItem(MARK_STORE) || '{}')); } catch (e) {}
+const SELF_DONE = new Set();
+try {
+  const a = JSON.parse(localStorage.getItem('selfcheck-v1') || '{}');
+  for (const [k, v] of Object.entries(a)) { const m = /^(\d+):(\d+)(?::v\d+)?$/.exec(k); if (m && v === 'y') SELF_DONE.add(`${m[1]}-${m[2]}`); }
+} catch (e) {}
+const isSaved = k => MARKS.saved[k] === true;
+const isDone = k => MARKS.done[k] === true || (MARKS.done[k] !== false && SELF_DONE.has(k));
+const saveMarks = () => { try { localStorage.setItem(MARK_STORE, JSON.stringify(MARKS)); } catch (e) {} };
+function paintMarks(c){
+  const k = c.dataset.key;
+  c.querySelector('.mk.save').setAttribute('aria-pressed', String(isSaved(k)));
+  c.querySelector('.mk.done').setAttribute('aria-pressed', String(isDone(k)));
+  c.classList.toggle('is-done', isDone(k));
+}
+function fitsMark(e){
+  if (!state.mark.size) return true;
+  const k = `${e.sec}-${e.n}`;
+  return (state.mark.has('saved') && isSaved(k)) || (state.mark.has('done') && isDone(k)) || (state.mark.has('undone') && !isDone(k));
+}
+function countMarks(){
+  let s = 0, d = 0; for (const {e} of CARDS){ const k = `${e.sec}-${e.n}`; if (isSaved(k)) s++; if (isDone(k)) d++; }
+  const g = document.querySelector('[data-dim="mark"]');
+  g.querySelector('[data-v="saved"] i').textContent = s;
+  g.querySelector('[data-v="done"] i').textContent = d;
+  g.querySelector('[data-v="undone"] i').textContent = CARDS.length - d;
+}
 /* 最近更新：updates.json 由 tools/updates.mjs 从 git 历史生成，记着哪条哪天新增、正文哪天改过（光改措辞不算） */
 let UPD = {};
 const TODAY = Date.parse(new Intl.DateTimeFormat('sv-SE').format(new Date()));
@@ -1153,7 +1205,7 @@ function fitsMe(e){
   const has = v => state.who.has(v) || (v === '35岁' && state.who.has('60岁'));
   return e.who.some(g => g.every(has));
 }
-const state = { q:'', sec:new Set(), ratio:new Set(), lens:new Set(), grade:new Set(), money:new Set(), time:new Set(), will:new Set(), who:new Set(), upd:new Set(), days:new Set(), dispute:false, todo:false };
+const state = { q:'', sec:new Set(), ratio:new Set(), lens:new Set(), grade:new Set(), money:new Set(), time:new Set(), will:new Set(), who:new Set(), upd:new Set(), days:new Set(), mark:new Set(), dispute:false, todo:false };
 function readUrl(){
   const p = new URLSearchParams(location.search);
   state.q = p.get('q') || '';
@@ -1212,6 +1264,7 @@ function apply(){
     if (ok && state.will.size && !state.will.has(e.will)) ok = false;
     if (ok && !fitsMe(e)) ok = false;
     if (ok && !fitsUpd(e)) ok = false;
+    if (ok && !fitsMark(e)) ok = false;
     if (ok && state.dispute && !e.dispute) ok = false;
     if (ok && state.todo && !e.todo) ok = false;
     if (ok && terms.length && !terms.every(t => e.hay.includes(t))) ok = false;
@@ -1282,6 +1335,17 @@ function wire(){
   document.getElementById('f-sec').addEventListener('click', ev => {
     const a = ev.target.closest('a[data-go]'); if (!a) return;
     ev.preventDefault(); setMenu(false); gotoItem(a.dataset.go, spyLast);
+  });
+  // Nút lưu / đã làm trên mỗi thẻ
+  document.getElementById('list').addEventListener('click', ev => {
+    const b = ev.target.closest('.mk[data-mk]'); if (!b) return;
+    const c = b.closest('.card'), k = c.dataset.key, kind = b.dataset.mk;
+    const on = kind === 'saved' ? !isSaved(k) : !isDone(k);
+    if (on) MARKS[kind][k] = true;
+    else if (kind === 'done' && SELF_DONE.has(k)) MARKS[kind][k] = false;
+    else delete MARKS[kind][k];
+    saveMarks(); paintMarks(c); countMarks();
+    track('mark', { kind, on });
   });
   document.getElementById('f-dispute').addEventListener('change', e => { state.dispute = e.target.checked; apply(); toTop(); });
   document.getElementById('f-todo').addEventListener('change', e => { state.todo = e.target.checked; apply(); toTop(); });
@@ -1579,7 +1643,7 @@ document.addEventListener('keydown', ev => {
     PERF.log('parse', t1, files.length + ' files');
     status.remove();
     const t2 = performance.now(); build(sections); PERF.log('建 DOM', t2, CARDS.length + ' 张卡');
-    buildGlossary(); buildUpdLine(); readUrl(); wire(); apply();
+    buildGlossary(); buildUpdLine(); countMarks(); readUrl(); wire(); apply();
     PERF.mark(`DOM 节点 ${document.getElementsByTagName('*').length}，术语 ${GLOSS.length}`);
     if (location.hash){
       let target = document.getElementById(location.hash.slice(1));
