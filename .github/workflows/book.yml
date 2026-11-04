@@ -1,0 +1,76 @@
+name: Sách điện tử
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'book/**'
+      - 'docs/**'
+      - 'README.md'
+      - 'tools/**'
+      - '.github/workflows/book.yml'
+  pull_request:
+    paths:
+      - 'book/**'
+      - 'docs/**'
+      - 'README.md'
+      - 'tools/**'
+      - '.github/workflows/book.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v4
+
+      - name: Cài Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Cài pandoc, xelatex, font và epubcheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc epubcheck \
+            texlive-xetex texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended texlive-lang-chinese lmodern \
+            fonts-noto-core fonts-noto-cjk
+
+      - name: Dựng EPUB và PDF
+        run: node tools/build-ebook.mjs
+
+      # EPUB hỏng thì job đỏ, nhưng không chặn bước đăng PDF bên dưới
+      - name: Kiểm EPUB
+        run: epubcheck dist/HowToLiveBetter-vi.epub
+
+      - name: Lưu bản dựng
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sach-dien-tu
+          path: |
+            dist/HowToLiveBetter-vi.epub
+            dist/HowToLiveBetter-vi.pdf
+          if-no-files-found: warn
+
+      - name: Đăng lên Release epub-latest
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          files=$(ls dist/HowToLiveBetter-vi.epub dist/HowToLiveBetter-vi.pdf 2>/dev/null || true)
+          if [ -z "$files" ]; then
+            echo "Không có file nào để đăng."
+            exit 0
+          fi
+          if ! gh release view epub-latest >/dev/null 2>&1; then
+            gh release create epub-latest \
+              --title "Sách điện tử (bản mới nhất)" \
+              --notes "EPUB và PDF dựng tự động từ book/ và docs/ của bản dịch tiếng Việt. Bản gốc: eternity4719/HowToLiveBetter (CC BY 4.0), bản dịch cũng phát hành theo CC BY 4.0."
+          fi
+          gh release upload epub-latest $files --clobber

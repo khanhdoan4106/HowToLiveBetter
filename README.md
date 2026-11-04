@@ -8,6 +8,13 @@ Trang đọc có lọc theo tiền, thời gian, ý chí, mức kiểm chứng v
 
 > **Lưu ý:** luật lệ, số liệu, giá cả, số điện thoại và cơ quan nhà nước trong sách phần lớn là của Trung Quốc. Phần sức khỏe dựa trên nghiên cứu y khoa nên áp dụng được ở nhiều nơi. Phần pháp luật, bảo hiểm, thủ tục thì ở Việt Nam phải đối chiếu quy định tương ứng. Giá tính bằng tệ (nhân dân tệ). Mục **Nguồn** là link bản gốc.
 
+## Tải về đọc offline
+
+- [Bản EPUB](https://github.com/khanhdoan4106/LiveBetter/releases/download/epub-latest/HowToLiveBetter-vi.epub) — cho điện thoại, máy đọc sách (Kindle, Kobo, Apple Books…)
+- [Bản PDF](https://github.com/khanhdoan4106/LiveBetter/releases/download/epub-latest/HowToLiveBetter-vi.pdf) — để in hoặc đọc trên máy tính
+
+Cả hai bản được dựng tự động mỗi khi `book/`, `docs/` hoặc `README.md` thay đổi. Link luôn trỏ tới bản mới nhất.
+
 ## Mục lục
 
 1. [Don't Die Early (Đừng chết sớm)](book/01-dung-chet-som.md)
