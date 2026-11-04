@@ -38,8 +38,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc epubcheck \
             texlive-xetex texlive-latex-recommended texlive-latex-extra \
-            texlive-fonts-recommended texlive-lang-chinese lmodern \
-            fonts-noto-core fonts-noto-cjk
+            texlive-fonts-recommended lmodern \
+            fonts-noto-core
 
       - name: Dựng EPUB và PDF
         run: node tools/build-ebook.mjs
