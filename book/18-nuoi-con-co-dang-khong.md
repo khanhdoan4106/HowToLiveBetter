@@ -34,7 +34,7 @@ Chương này tính hai món: tiền và thời gian. Giống chương 10 tính 
 ### 4. Sổ thời gian nuôi con tính theo "thời gian của ai bị chiếm mất", không tính theo "vất vả hay không"
 <!-- 成本标签: 钱=0 时间=多 毅力=是 收益=大 口径=时间 -->
 - Chi phí: Không tốn tiền, tốn thời gian. Bé trước 3 tuổi cơ bản bị chiếm cả ngày. Khó ở chỗ ngày nào cũng vậy, không thể cắn răng mấy hôm là qua.
-- Nói dễ hiểu: Đem số giờ mỗi ngày trông con, số lần ban đêm bị đánh thức, đều quy ra thời gian. Rồi nhân với tiền công một giờ của người làm mấy việc đó. Con số tính ra, nói chung lớn hơn tiền sữa tiền tã rất nhiều. Nên chia việc tốt nhất là bàn trước khi sinh.
+- Nói dễ hiểu: Đem số giờ mỗi ngày trông con, số lần ban đêm bị đánh thức, đều quy ra thời gian. Rồi nhân với tiền công một giờ của người làm mấy việc đó. Con số tính ra, nói chung lớn hơn tiền sữa tiền tã rất nhiều. Vì vậy chia việc tốt nhất là bàn trước khi sinh.
 - Lợi ích: Đem thời gian trông con mỗi ngày, số lần ban đêm bị đánh thức, đều quy ra giờ. Rồi nhân với tiền công một giờ của người làm mấy việc đó. Con số thu được thường lớn hơn tiền sữa tiền tã rất nhiều. Trông con, nấu ăn, đêm dậy mấy việc này tuy không ai trả tiền, cũng ghi vào chi phí theo cách đó. Cách tính giống cách tính việc nhà ở chương 10. Bàn xong chia việc, rồi mới quyết sinh hay không (toàn quốc).
 - Mức kiểm chứng: C
 - Nguồn: 作者经验，无直接文献；口径见第 10 节

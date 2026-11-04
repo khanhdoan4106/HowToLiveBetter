@@ -60,7 +60,7 @@ Chương này chỉ tính khoản thời gian. Cái được xem là mỗi ngày
 
 ### 7. Chia nhiệm vụ lớn thành nhiệm vụ con rồi mới ước thời gian, rồi mới bắt đầu
 <!-- 成本标签: 钱=0 时间=少 毅力=否 收益=中 口径=时间 -->
-- Chi phí: Không tốn tiền. Bản thân việc chia mất 5 đến 15 phút.
+- Chi phí: Không tốn tiền. Riêng việc chia mất 5 đến 15 phút.
 - Nói dễ hiểu: Khi người ta ước thời gian hoàn thành, không tự động chia nhiệm vụ ra từng việc để tính. Liệt kê nhiệm vụ con ra trước rồi mới ước thì ít ước ngắn đi một đoạn. Chia ra rồi, mỗi bước nhỏ đều có thể bắt tay làm ngay, cũng không dễ trì hoãn như vậy.
 - Lợi ích: Khi ước thời gian hoàn thành, người ta không tự chia một nhiệm vụ nhiều đầu thành mấy phần. Ví dụ viết tổng quan tài liệu, viết phần thảo luận, sắp xếp tài liệu tham khảo, vốn là mấy việc khác nhau. Liệt kê nhiệm vụ con ra trước rồi mới ước thì ít mắc lỗi ước thời gian ngắn đi, lỗi này gọi là ngụy biện lập kế hoạch. Chia ra rồi, mỗi bước nhỏ đều thành một hành động có thể bắt đầu ngay, trì hoãn cũng theo đó ít đi. Trong nghiên cứu, những yếu tố báo trước trì hoãn rõ nhất gồm cảm giác chán ghét việc đó, và bản thân nhiệm vụ bị dời lùi về sau.
 - Mức kiểm chứng: B
@@ -159,7 +159,7 @@ Chương này chỉ tính khoản thời gian. Cái được xem là mỗi ngày
 
 ### 18. Khi chọn chỗ ở, đặt thời gian đi lại lên trước, rút ngắn thời gian đi làm một chiều
 <!-- 成本标签: 钱=多 时间=中 毅力=否 收益=大 口径=时间 -->
-- Chi phí: Chi phí cao. Có thể phải trả tiền thuê cao hơn, hoặc đổi sang căn nhà nhỏ hơn. Bản thân việc chuyển nhà cũng tốn thời gian.
+- Chi phí: Chi phí cao. Có thể phải trả tiền thuê cao hơn, hoặc đổi sang căn nhà nhỏ hơn. Riêng việc chuyển nhà cũng tốn thời gian.
 - Nói dễ hiểu: Trong dữ liệu theo dõi của Đức, người đi lại càng lâu, càng thấy mình sống không tốt. Khoản thiệt này không được bù lại bằng tiền lương hay nhà ở. Một chiều ít đi 30 phút, một tuần dành ra được 5 tiếng.
 - Lợi ích: Cư dân Trung Quốc mỗi ngày dành cho giao thông trung bình 50 phút. Chỉ tính người có đi lại trong ngày, là 1 tiếng 2 phút. Đây là số liệu năm 2024. Dữ liệu theo dõi dài hạn cùng một nhóm người ở Đức cho thấy người đi lại càng lâu, hạnh phúc chủ quan (tự thấy mình sống tốt hay không) càng thấp một cách ổn định. Hơn nữa khoản thiệt này không được bù về thu nhập hay nhà ở. Tổng quan gom nhiều nghiên cứu cũng xác nhận, thời gian đi lại càng dài, người ta càng không hài lòng với việc đi lại, điều này không liên quan đến dùng phương tiện gì. Một chiều ít đi 30 phút, mỗi tuần tiết kiệm khoảng 5 tiếng.
 - Mức kiểm chứng: B

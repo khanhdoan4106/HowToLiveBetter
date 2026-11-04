@@ -4,7 +4,7 @@
 
 Thuốc hạ sốt, thuốc giảm đau, thuốc cảm, thuốc dạ dày, thuốc cầm tiêu chảy, phần nhiều ra hiệu thuốc là tự mua được. Mua được không cần đơn không có nghĩa là uống thế nào cũng được. Chương này không nói mỗi bệnh nên uống thuốc gì, chỉ chọn mấy việc mà một động tác là tránh được hậu quả nặng.
 
-Các mục của chương này đều xếp vào cách tính tỷ lệ tử vong. Phần nhiều xem là hậu quả nặng như suy gan, xuất huyết dạ dày, suy thận ở trẻ sơ sinh, cũng có mấy mục xem là đau đầu và phản ứng lúc lái xe. Lợi ích phần nhiều là "bớt xảy ra một vụ nghiêm trọng", nghiên cứu không đưa ra được con số "làm rồi giảm được mấy phần mười". Nên mức lợi ích là phán đoán theo độ nặng của hậu quả, mỗi ghi chú đều viết dựa vào đâu mà định.
+Các mục của chương này đều xếp vào cách tính tỷ lệ tử vong. Phần nhiều xem là hậu quả nặng như suy gan, xuất huyết dạ dày, suy thận ở trẻ sơ sinh, cũng có mấy mục xem là đau đầu và phản ứng lúc lái xe. Lợi ích phần nhiều là "bớt xảy ra một vụ nghiêm trọng", nghiên cứu không đưa ra được con số "làm rồi giảm được mấy phần mười". Vì vậy mức lợi ích là phán đoán theo độ nặng của hậu quả, mỗi ghi chú đều viết dựa vào đâu mà định.
 
 Việc đã viết ở chỗ khác, ở đây chỉ chỉ đường. Uống nhầm thuốc hoặc chất tẩy rửa thì làm gì trước, xem mục 20 chương 13 (uống nhầm). Thuốc bệnh mạn tính uống đủ theo y lệnh, xem mục 1 chương 16 (uống thuốc đủ theo y lệnh). Mua thuốc kê đơn qua mạng phải qua xét duyệt đơn thuốc trước, xem mục 6 chương 28 (thuốc giảm cân thì đến bệnh viện lấy đơn).
 
