@@ -45,9 +45,25 @@ Trang đọc có lọc theo tiền, thời gian, ý chí, mức kiểm chứng v
 33. [Living After Disability (Sống thế nào sau khi bị khuyết tật)](book/33-song-the-nao-sau-khi-bi-khuyet-tat.md)
 34. [Home Medicine Cabinet: Don't Let It Go Wrong (Thuốc dự phòng trong nhà, đừng uống ra chuyện)](book/34-thuoc-du-phong-trong-nha-dung-uong-ra-chuyen.md)
 
+## Bài dài
+
+Các bài dài trong `docs/` của bản gốc, đã dịch sang tiếng Việt và đặt trong `docs/` của bản này:
+
+- [Việc phải làm trước và sau khi sinh con](docs/viec-can-lam-truoc-va-sau-khi-sinh-con.md)
+- [Vừa được chẩn đoán bệnh mạn tính](docs/sau-khi-moi-chan-doan-benh-man-tinh.md)
+- [Bị cho nghỉ việc rồi thì làm gì trước](docs/bi-sa-thai-thi-lam-gi-truoc.md)
+- [Trước khi đổi việc, đổi thành phố](docs/truoc-khi-doi-viec-doi-thanh-pho.md)
+- [Trên đường gặp người lạ gặp nạn, đi tiếp hay dừng lại](docs/gap-nguoi-la-gap-nan-co-nen-dung-lai.md)
+- [Kết hôn có đáng không](docs/ket-hon-co-dang-khong.md)
+- [Cơ thể nhận biết thời gian thế nào, và vì sao ca đêm lại hại](docs/dong-ho-sinh-hoc-va-ca-dem.md)
+- [Danh mục đồ dự phòng cho hộ gia đình](docs/danh-muc-do-du-phong-cho-ho-gia-dinh.md)
+- [Làm nền tảng thì phải xin những giấy phép nào](docs/lam-nen-tang-can-giay-phep-gi.md)
+
+Bản gốc còn `docs/引用对照.md` (bảng đối chiếu tham chiếu chéo do công cụ sinh ra, nguyên văn ghi "đừng sửa tay") và thư mục `docs/核实记录/` (ghi chép kiểm chứng nội bộ), hai phần này không dịch.
+
 ## Nguồn gốc và giấy phép
 
 - Bản gốc tiếng Trung: [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter), tên sách 《高性价比人生指南》, tác giả eternity4719.
 - Bản gốc phát hành theo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Bản dịch này là tác phẩm phái sinh, **đã dịch và chỉnh sửa**, cũng phát hành theo CC BY 4.0 ([LICENSE](LICENSE)). Giao diện trang tra cứu (`index.html`) được chuyển thể từ mã nguồn của bản gốc, phát hành theo giấy phép MIT (xem [LICENSE-CODE](LICENSE-CODE)).
 - Dịch dựa trên bản gốc đến đầu tháng 11 năm 2026. Luật, mức trợ cấp và thời hạn thay đổi thường xuyên, bản gốc có thể đã cập nhật sau mốc này.
-- Dịch và chỉnh sửa: dkanh, có dùng AI hỗ trợ. Có thể còn câu dịch gượng, bạn thấy lỗi thì mở issue hoặc pull request. Các bài dài trong `docs/` của bản gốc chưa dịch.
+- Dịch và chỉnh sửa: dkanh, có dùng AI hỗ trợ. Có thể còn câu dịch gượng, bạn thấy lỗi thì mở issue hoặc pull request. Các bài dài trong `docs/` của bản gốc đã dịch, xem mục [Bài dài](#bài-dài).
