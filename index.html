@@ -453,7 +453,20 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
       <div class="stat" aria-live="polite">Đang hiện <b id="cnt">–</b> mục, trên tổng <span id="tot">–</span> mục</div>
       <div class="doc-links" id="upd-line" hidden></div>
       <div class="doc-links">Tự kiểm tra: <a href="selfcheck.html">trả lời vài chục câu có/không để xem trong sách còn việc nào bạn chưa làm</a></div>
-      <div class="doc-links">Bài dài (chưa dịch, bản tiếng Trung): <a href="https://github.com/eternity4719/HowToLiveBetter/tree/main/docs" target="_blank" rel="noopener">docs/ của repo gốc</a></div>
+      <details class="gloss" id="docs"><summary>Bài dài (đã dịch)</summary>
+        <p>Mấy bài dài của bản gốc, xếp theo lúc bạn cần đến. Bấm vào là đọc ngay trong trang, không phải rời trang.</p>
+        <p>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/viec-can-lam-truoc-va-sau-khi-sinh-con.md" target="_blank" rel="noopener">Việc phải làm trước và sau khi sinh con</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/sau-khi-moi-chan-doan-benh-man-tinh.md" target="_blank" rel="noopener">Vừa được chẩn đoán bệnh mạn tính</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/bi-sa-thai-thi-lam-gi-truoc.md" target="_blank" rel="noopener">Bị cho nghỉ việc rồi thì làm gì trước</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/truoc-khi-doi-viec-doi-thanh-pho.md" target="_blank" rel="noopener">Trước khi đổi việc, đổi thành phố</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/gap-nguoi-la-gap-nan-co-nen-dung-lai.md" target="_blank" rel="noopener">Trên đường gặp người lạ gặp nạn, đi tiếp hay dừng lại</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/ket-hon-co-dang-khong.md" target="_blank" rel="noopener">Kết hôn có đáng không</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/dong-ho-sinh-hoc-va-ca-dem.md" target="_blank" rel="noopener">Cơ thể nhận biết thời gian thế nào, và vì sao ca đêm lại hại</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/danh-muc-do-du-phong-cho-ho-gia-dinh.md" target="_blank" rel="noopener">Danh mục đồ dự phòng cho hộ gia đình</a><br>
+          <a href="https://github.com/khanhdoan4106/LiveBetter/blob/main/docs/lam-nen-tang-can-giay-phep-gi.md" target="_blank" rel="noopener">Làm nền tảng thì phải xin những giấy phép nào</a>
+        </p>
+      </details>
       <details class="gloss" id="gloss"><summary>Viết tắt và thuật ngữ khó hiểu</summary><p>Từ có gạch chấm trong bài, bấm vào hoặc đưa chuột lên là có giải thích. Bảng đầy đủ ở dưới.</p><dl></dl></details>
     </div>
     <div id="list">
@@ -1343,7 +1356,6 @@ async function readText(path, tries = 3){
    条目备注里 hrefOf() 转出来的相对链接，形状都是这一个，所以一处拦全部生效。 */
 const DOC_PREFIX = REPO_BLOB + 'docs/';
 function docPathOf(href){
-  return null;   // bài dài chưa dịch, link mở thẳng repo gốc
   if (!href || href.indexOf(DOC_PREFIX) !== 0) return null;
   const rest = href.slice(DOC_PREFIX.length);
   if (!/^[^/?#]+[.]md$/.test(rest)) return null;   // 目录链接（核实记录）不在其内
@@ -1376,7 +1388,7 @@ function dmRender(md){
   const flush = () => { flushP(); flushL(); };
   for (let i = 0; i < lines.length; i++){
     const ln = lines[i];
-    if (/^\[← 回总目录\]/.test(ln)) continue;          // 回总目录那行在弹窗里没有意义
+    if (/^\[← (回总目录|Về mục lục)\]/.test(ln)) continue;          // 回总目录那行在弹窗里没有意义
     if (!ln.trim()){ flush(); continue; }
     let m;
     if ((m = ln.match(/^(#{1,4})\s+(.*)$/))){
@@ -1424,7 +1436,7 @@ function dmXrefs(root){
   const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT,
     { acceptNode: n => n.parentElement.closest('a,code') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
   const nodes = [];
-  while (w.nextNode()) if (/第\s*\d/.test(w.currentNode.nodeValue)) nodes.push(w.currentNode);
+  while (w.nextNode()) if (/第\s*\d|[Mm]ục\s+\d|[Cc]hương\s+\d/.test(w.currentNode.nodeValue)) nodes.push(w.currentNode);
   for (const n of nodes){
     const f = document.createDocumentFragment();
     xrefInto(f, n.nodeValue, []);
