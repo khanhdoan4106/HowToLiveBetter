@@ -6,7 +6,7 @@ Bản dịch tiếng Việt của cuốn sách hướng dẫn sống tính theo 
 
 Trang đọc có lọc theo tiền, thời gian, ý chí, mức bằng chứng và hoàn cảnh của bạn, tìm kiếm không cần gõ dấu. Có thêm trang [tự kiểm tra](https://khanhdoan4106.github.io/LiveBetter/selfcheck.html) và bảng [thuật ngữ](thuat-ngu.md).
 
-> **Lưu ý:** luật lệ, số liệu, giá cả, số điện thoại và cơ quan nhà nước trong sách phần lớn là của Trung Quốc. Phần sức khỏe dựa trên nghiên cứu y khoa nên áp dụng được ở nhiều nơi. Phần pháp luật, bảo hiểm, thủ tục thì ở Việt Nam phải đối chiếu quy định tương ứng. Giá tính bằng tệ (nhân dân tệ). Mục **Nguồn** giữ nguyên bản gốc để bạn tự tra.
+> **Lưu ý:** luật lệ, số liệu, giá cả, số điện thoại và cơ quan nhà nước trong sách phần lớn là của Trung Quốc. Phần sức khỏe dựa trên nghiên cứu y khoa nên áp dụng được ở nhiều nơi. Phần pháp luật, bảo hiểm, thủ tục thì ở Việt Nam phải đối chiếu quy định tương ứng. Giá tính bằng tệ (nhân dân tệ). Mục **Nguồn** là link bản gốc.
 
 ## Mục lục
 
