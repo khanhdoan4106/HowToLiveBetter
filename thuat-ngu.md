@@ -13,4 +13,5 @@ Các thuật ngữ thống kê hay gặp trong sách. Trên trang tra cứu, t�
 | Phân tích gộp | Gộp kết quả nhiều nghiên cứu để có một ước tính chung |
 | Nghiên cứu đoàn hệ | Theo dõi một nhóm người nhiều năm. Cho thấy liên quan, chưa chắc nhân quả |
 | Yếu tố gây nhiễu | Yếu tố thứ ba cùng ảnh hưởng nguyên nhân và kết quả, làm liên quan trông giống nhân quả |
+| Mức kiểm chứng | Mức tin cậy của số liệu trong từng mục. Mức A: có số liệu định lượng từ phân tích gộp, nghiên cứu lớn hoặc thử nghiệm ngẫu nhiên. Mức B: có nghiên cứu nhưng khó định lượng, hoặc mẫu nhỏ. Mức C: kinh nghiệm hoặc đồng thuận chung, chưa có tài liệu trực tiếp |
 | BMI | Cân nặng (kg) chia bình phương chiều cao (m) |
