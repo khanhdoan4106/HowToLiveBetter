@@ -184,6 +184,7 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .doc-head p{margin:0;color:var(--t2);font-size:16px}
 .doc-head .stat{color:var(--t3);font-size:14px;margin-top:6px}
 .doc-head .stat b{color:var(--brand-1);font-weight:600}
+.intro-toggle{display:none}
 .sec-block{margin-top:40px}
 .sec-h{display:flex;align-items:baseline;gap:12px;padding-top:24px;border-top:1px solid var(--divider);margin-bottom:8px}
 .sec-h h2{font-size:24px;line-height:32px;font-weight:600;letter-spacing:-.02em;margin:0}
@@ -286,6 +287,10 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
   #doc-modal{border-radius:0;border:0;height:100%}
   .dm-toc{display:none}
   .dm-doc{padding:16px 18px 56px}
+  .intro-more{display:none}
+  .intro-more.on{display:block}
+  .intro-toggle{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:7px 16px;border:1px solid var(--divider);border-radius:999px;background:var(--bg-elv);color:var(--brand-1);font-size:14px;font-weight:500;cursor:pointer}
+  .intro-toggle:hover{border-color:var(--brand-1)}
 }
 .gloss{margin-top:16px;border:1px solid var(--divider);border-radius:8px;padding:0 16px;font-size:13px;color:var(--t2)}
 .gloss summary{cursor:pointer;padding:10px 0;font-weight:500;color:var(--t2);list-style:none;display:flex;align-items:center;gap:6px}
@@ -478,9 +483,12 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
     <div class="doc-head">
       <h1>How To Live Better <small style="font-weight:400;opacity:.7">(高性价比人生指南)</small></h1>
       <p>Mỗi mục trả lời hai câu hỏi: bỏ ra cái gì, đổi lại được cái gì.</p>
-      <p>Phần "đổi lại" tính cho ai cũng chia bậc: bản thân bạn cao nhất, kế đến vợ chồng và người thân trực hệ, rồi bạn bè đồng nghiệp, người lạ thấp nhất. Thấp nhất không có nghĩa là bằng không, chỉ là khả năng được đền đáp nhỏ và phải tính cả rủi ro.</p>
-      <p>Không cần làm hết: đây là danh sách để chọn, không phải việc phải làm. Chọn được một hai mục là đã có ích, còn lại cần thì quay lại tra. Muốn chọn việc đỡ tốn công, trong bộ lọc chọn "Tốn tiền: Không tốn" và "Cần ý chí: Không cần". Chính tác giả cũng chưa làm được phần lớn. Chữ "mục N" có gạch chấm trong bài bấm vào được, xem ngay mục đó viết gì, khỏi phải lật tìm.</p>
+      <div class="intro-more" id="intro-more">
+        <p>Phần "đổi lại" tính cho ai cũng chia bậc: bản thân bạn cao nhất, kế đến vợ chồng và người thân trực hệ, rồi bạn bè đồng nghiệp, người lạ thấp nhất. Thấp nhất không có nghĩa là bằng không, chỉ là khả năng được đền đáp nhỏ và phải tính cả rủi ro.</p>
+        <p>Không cần làm hết: đây là danh sách để chọn, không phải việc phải làm. Chọn được một hai mục là đã có ích, còn lại cần thì quay lại tra. Muốn chọn việc đỡ tốn công, trong bộ lọc chọn "Tốn tiền: Không tốn" và "Cần ý chí: Không cần". Chính tác giả cũng chưa làm được phần lớn. Chữ "mục N" có gạch chấm trong bài bấm vào được, xem ngay mục đó viết gì, khỏi phải lật tìm.</p>
+      </div>
       <p>Nội dung sách có thể đã cũ hoặc sai. Nhiều chính sách mỗi nơi áp dụng khác nhau, và <strong>phần luật, thủ tục, giá cả, số điện thoại trong sách là của Trung Quốc</strong>. Muốn làm việc thật, khám bệnh hay kiện tụng, hãy theo cơ quan, bác sĩ và luật sư tại nơi bạn ở. Thấy chỗ dịch sai, bạn có thể <a href="https://github.com/khanhdoan4106/HowToLiveBetter/issues">mở issue</a>.</p>
+      <button class="intro-toggle" id="intro-toggle" type="button" aria-expanded="false" aria-controls="intro-more">Đọc thêm</button>
       <div class="stat" aria-live="polite">Đang hiện <b id="cnt">–</b> mục, trên tổng <span id="tot">–</span> mục</div>
       <div class="doc-links" id="upd-line" hidden></div>
       <div class="doc-links">Tự kiểm tra: <a href="selfcheck.html">trả lời vài chục câu có/không để xem trong sách còn việc nào bạn chưa làm</a></div>
@@ -1301,6 +1309,13 @@ function reportSearch(){
 }
 function wire(){
   const sb = document.getElementById('sidebar'), bd = document.getElementById('backdrop'), mb = document.getElementById('menu');
+  // Điện thoại: phần giới thiệu dài thu sau nút "Đọc thêm", câu cảnh báo luôn hiện.
+  const introBtn = document.getElementById('intro-toggle'), introMore = document.getElementById('intro-more');
+  if (introBtn && introMore) introBtn.addEventListener('click', () => {
+    const open = introMore.classList.toggle('on');
+    introBtn.setAttribute('aria-expanded', String(open));
+    introBtn.textContent = open ? 'Thu gọn' : 'Đọc thêm';
+  });
   const setMenu = (on) => { sb.classList.toggle('open', on); bd.classList.toggle('on', on); mb.setAttribute('aria-expanded', String(on)); };
   // 筛选变了就顺手让 spy 重算一次 hash：writeUrl 是无条件把旧 hash 拼回去的，
   // 而滚回顶部时页面若本来就在顶部不会触发 scroll，hash 会僵在一个已经被筛掉的
