@@ -7,7 +7,7 @@ Các thuật ngữ thống kê hay gặp trong sách. Trên trang tra cứu, t�
 | Tử vong chung | Tỷ lệ người chết vì bất kỳ nguyên nhân nào trong một khoảng thời gian |
 | HR, tỷ số nguy cơ | Tốc độ gặp biến cố của hai nhóm. HR 0,87 là thấp hơn nhóm đối chứng 13%, HR 1,21 là cao hơn 21% |
 | RR, nguy cơ tương đối | Tỷ số xác suất gặp biến cố của hai nhóm, đọc như HR |
-| OR, tỷ số chênh | Gần bằng RR khi biến cố hiếm, phóng đại khác biệt khi biến cố phổ biến |
+| OR, tỷ số chênh | Tỷ số chênh. Khi biến cố hiếm thì gần bằng RR, khi biến cố phổ biến thì phóng đại khác biệt. Không quy đổi OR thành phần trăm hay số lần xác suất |
 | 95% CI, khoảng tin cậy | Khoảng tin cậy 95%. Khoảng của tỷ số vắt qua 1 thì khác biệt có thể chỉ là ngẫu nhiên |
 | RCT | Thử nghiệm ngẫu nhiên có đối chứng, cho thấy quan hệ nhân quả tốt nhất |
 | Phân tích gộp | Gộp kết quả nhiều nghiên cứu để có một ước tính chung |

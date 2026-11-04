@@ -25,7 +25,7 @@ Chương này tính hai món: tiền và thời gian. Giống chương 10 tính 
 ### 3. Biết điều này: không được vì mang thai, sinh con, cho con bú mà giảm lương hoặc sa thải
 <!-- 成本标签: 钱=0 时间=少 毅力=否 收益=大 口径=金钱 -->
 - Chi phí: Không tốn tiền.
-- Nói dễ hiểu: Đơn vị vì bạn mang thai, sinh con, cho con bú mà giảm lương hoặc sa thải bạn, đều là trái pháp luật. Con chưa đủ một tuổi, mỗi ngày bạn có 1 giờ cho con bú, đơn vị cũng không được xếp bạn làm thêm giờ và làm ca đêm, vi phạm thì phạt mỗi người 1000 đến 5000 tệ. Đòi bồi thường đi đường nào, xem chương 19.
+- Nói dễ hiểu: Đơn vị vì bạn mang thai, sinh con, cho con bú mà giảm lương hoặc sa thải bạn, đều là trái pháp luật. Con chưa đủ một tuổi, mỗi ngày bạn có 1 giờ cho con bú. Đơn vị cũng không được xếp bạn làm thêm giờ và làm ca đêm, vi phạm điều này thì phạt mỗi người 1000 đến 5000 tệ. Đòi bồi thường đi đường nào, xem chương 19.
 - Lợi ích: Quốc vụ viện quy định: "Đơn vị sử dụng lao động không được vì người lao động nữ mang thai, sinh con, cho con bú mà giảm lương, sa thải, hủy hợp đồng lao động hoặc hợp đồng tuyển dụng với họ." Ba khoảng thời gian này đơn vị không được giảm tiền của bạn, cũng không được sa thải hoặc hủy hợp đồng. Cho con bú chưa đủ 1 tuổi, mỗi ngày có 1 giờ cho con bú. Đơn vị cũng không được xếp bạn kéo dài thời gian lao động, không được xếp ca đêm. Làm thêm giờ, làm ca đêm trong thời kỳ cho con bú loại vi phạm này, phạt mỗi người trên 1000 tệ dưới 5000 tệ. Giảm lương, sa thải thì quy định này không kèm mức phạt, người bị sa thải trái pháp luật đi trọng tài lao động yêu cầu khôi phục hoặc bồi thường (toàn quốc).
 - Mức kiểm chứng: A
 - Nguồn: 国务院 (2012). 女职工劳动保护特别规定（国令第 619 号，第五条、第九条、第十三条）. <https://www.gov.cn/zhengce/zhengceku/2012-05/07/content_6584.htm>
@@ -56,7 +56,7 @@ Chương này tính hai món: tiền và thời gian. Giống chương 10 tính 
 - Lợi ích: Cách nghĩ giống chương 10. Kỳ vọng của người khác có thể tính là một yếu tố cân nhắc của bạn. Nhưng chi phí phải ghi vào sổ của chính bạn, không ghi vào sổ của họ. "Nuôi con để dưỡng già" càng phải tính riêng một khoản, vì nó giả định là năng lực kinh tế và ý muốn của một người khác hai mươi năm sau (toàn quốc).
 - Mức kiểm chứng: C
 - Nguồn: 作者经验，无直接文献；同类分析见第 10 节
-- Ghi chú: Viết cả "hậu quả của việc không sinh" ra, đặt cùng "hậu quả của việc sinh" mà đối chiếu. Chỉ viết sổ một bên, không gọi là tính sổ.
+- Ghi chú: Viết cả "hậu quả của việc không sinh" ra, đặt cùng "hậu quả của việc sinh" mà đối chiếu.
 
 ### 7. Định để mấy năm nữa mới sinh con, thì trước hết tính khoản tuổi của người vợ vào: quanh 40 tuổi khả năng thụ thai tự nhiên, tỷ lệ thành công của thụ tinh ống nghiệm đều xuống rõ rệt
 <!-- 成本标签: 钱=0 时间=少 毅力=些 收益=大 口径=死亡率 -->

@@ -180,7 +180,7 @@ parts.push(`# Ghi công
 - Nguyên tác: ${AUTHOR}. Bản gốc: <https://github.com/eternity4719/HowToLiveBetter>
 - Bản dịch tiếng Việt: dkanh, có dùng AI hỗ trợ. Trang bản dịch: <https://github.com/khanhdoan4106/LiveBetter>
 - Giấy phép: CC BY 4.0. Bản gốc phát hành theo CC BY 4.0; bản dịch là tác phẩm phái sinh, cũng phát hành theo CC BY 4.0.
-- Nội dung: 767 mục trong 34 chương, cộng 9 bài dài.
+- Nội dung: 768 mục trong 34 chương, cộng 9 bài dài.
 - Dịch dựa trên bản gốc đến đầu tháng 11 năm 2026. Luật, mức trợ cấp và thời hạn thay đổi thường xuyên, bản gốc có thể đã cập nhật sau mốc này.
 - Lưu ý: luật lệ, số liệu, giá cả, số điện thoại và cơ quan nhà nước trong sách phần lớn là của Trung Quốc. Phần sức khỏe dựa trên nghiên cứu y khoa nên áp dụng được ở nhiều nơi. Phần pháp luật, bảo hiểm, thủ tục thì ở Việt Nam phải đối chiếu quy định tương ứng. Giá tính bằng tệ (nhân dân tệ).
 - Đọc trên web: <https://khanhdoan4106.github.io/LiveBetter/>`);
@@ -210,7 +210,7 @@ ${parts.join('\n\n')}
 `;
 
 const items = chapterTexts.reduce((n, c) => n + (c.text.match(/^### /gm) || []).length, 0);
-if (items !== 767) throw new Error(`đếm được ${items} mục trong book/, mong đợi 767`);
+if (items !== 768) throw new Error(`đếm được ${items} mục trong book/, mong đợi 768`);
 
 fs.mkdirSync(BUILD, { recursive: true });
 const mdPath = path.join(BUILD, 'sach.md');
