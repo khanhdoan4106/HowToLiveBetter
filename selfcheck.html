@@ -295,7 +295,7 @@ function parse(md){
     }
     else if ((m = /^- Nói dễ hiểu:\s*(.*)$/.exec(line))) e.human = m[1];
     else if ((m = /^- Chi phí:\s*(.*)$/.exec(line))) e.cost = m[1];
-    else if ((m = /^- Mức bằng chứng:\s*([ABC])/.exec(line))) e.grade = m[1];
+    else if ((m = /^- Mức kiểm chứng:\s*([ABC])/.exec(line))) e.grade = m[1];
     else if ((m = /^- Ghi chú:\s*(.*)$/.exec(line))) e.note = m[1];
   }
   for (const x of out){
@@ -370,7 +370,7 @@ function card(e, also){
     <div class="h"><b>${esc(plain(e.title))}</b><a href="./#e-${e.sec}-${e.n}">Mục ${e.n} chương ${e.sec} →</a></div>
     ${e.note ? `<details class="caution"><summary>Điều kiện áp dụng và lưu ý</summary>${esc(plain(e.note))}</details>` : ''}
     ${e.human ? `<div class="human">${esc(plain(e.human))}</div>` : ''}
-    <div class="badges"><span class="badge ${r}">Đáng đồng tiền: ${RATIO_VI[e.ratio]}</span><span class="badge ${e.grade}">Bằng chứng mức ${e.grade}</span><span class="badge plain">Lợi ích ${LEVEL_VI[e.level] || e.level}</span>${lens}${e.dispute ? '<span class="badge warn">Có tranh cãi</span>' : ''}</div>
+    <div class="badges"><span class="badge ${r}">Đáng đồng tiền: ${RATIO_VI[e.ratio]}</span><span class="badge ${e.grade}">Kiểm chứng mức ${e.grade}</span><span class="badge plain">Lợi ích ${LEVEL_VI[e.level] || e.level}</span>${lens}${e.dispute ? '<span class="badge warn">Có tranh cãi</span>' : ''}</div>
     <div class="cost">Phải bỏ ra: ${esc(plain(e.cost))}</div>${alsoH}
   </div>`;
 }
@@ -421,7 +421,7 @@ function renderOut(){
   const alsoOf = q => (q.also || []).map(a => find(a.sec, a.n)).filter(Boolean);
   let h = '';
   if (top.length) h += `<h2>${topTitle}<small>đáng đồng tiền nhất trong số chưa làm</small></h2><ol class="top3">`
-    + top.map(q => `<li><a href="#c-${q.entry.sec}-${q.entry.n}">${esc(plain(q.entry.title))}</a> <span class="why">Đáng đồng tiền ${RATIO_VI[q.entry.ratio]}, bằng chứng mức ${q.entry.grade}, ${PILES.find(p => p.will === q.entry.will)?.name ?? ''}</span></li>`).join('') + '</ol>'
+    + top.map(q => `<li><a href="#c-${q.entry.sec}-${q.entry.n}">${esc(plain(q.entry.title))}</a> <span class="why">Đáng đồng tiền ${RATIO_VI[q.entry.ratio]}, kiểm chứng mức ${q.entry.grade}, ${PILES.find(p => p.will === q.entry.will)?.name ?? ''}</span></li>`).join('') + '</ol>'
     + `<div class="copy-tools">
       <button class="btn" id="copy-actions" type="button">Sao chép các việc này</button>
       <p class="copy-status" id="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
@@ -438,7 +438,7 @@ function renderOut(){
   document.getElementById('todo').innerHTML = h;
   if (top.length) document.getElementById('copy-text').value = `How To Live Better · ${topTitle}\n\n` + top.map(({entry:e}) =>
     `- [ ] ${plain(e.title)}\n`
-    + `  Đáng đồng tiền ${RATIO_VI[e.ratio]}, bằng chứng mức ${e.grade}, ${PILES.find(p => p.will === e.will)?.name ?? ''}${e.dispute ? ', có tranh cãi (xem ghi chú ở mục gốc)' : ''}\n`
+    + `  Đáng đồng tiền ${RATIO_VI[e.ratio]}, kiểm chứng mức ${e.grade}, ${PILES.find(p => p.will === e.will)?.name ?? ''}${e.dispute ? ', có tranh cãi (xem ghi chú ở mục gốc)' : ''}\n`
     + `  Phải bỏ ra: ${plain(e.cost)}\n`
     + (e.note ? `  Điều kiện áp dụng và lưu ý: ${plain(e.note)}\n` : '')
     + `  https://eternity4719.github.io/HowToLiveBetter/#e-${e.sec}-${e.n}`).join('\n\n');
