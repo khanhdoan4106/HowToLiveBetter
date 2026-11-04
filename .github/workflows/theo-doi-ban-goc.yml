@@ -1,0 +1,71 @@
+name: Theo dõi bản gốc
+
+on:
+  schedule:
+    # Thứ Hai 02:00 UTC (09:00 giờ Việt Nam)
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: theo-doi-ban-goc
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: So với mốc bản dịch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v4
+
+      - name: Cài Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Kiểm tra repo gốc
+        id: check
+        run: >-
+          node tools/kiem-tra-ban-goc.mjs
+          --out "$RUNNER_TEMP/issue.md"
+          --github-output "$GITHUB_OUTPUT"
+
+      - name: Mở hoặc cập nhật issue
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          TITLE: ${{ steps.check.outputs.title }}
+        run: |
+          set -euo pipefail
+
+          gh label create ban-goc-doi \
+            --repo "$REPO" \
+            --color FBCA04 \
+            --description "Repo gốc có thay đổi cần đồng bộ" 2>/dev/null || true
+
+          existing="$(gh issue list \
+            --repo "$REPO" \
+            --label ban-goc-doi \
+            --state open \
+            --limit 1 \
+            --json number \
+            --jq '.[0].number')"
+
+          if [ -z "$existing" ] || [ "$existing" = "null" ]; then
+            gh issue create \
+              --repo "$REPO" \
+              --title "$TITLE" \
+              --label ban-goc-doi \
+              --body-file "$RUNNER_TEMP/issue.md"
+          else
+            gh issue edit "$existing" \
+              --repo "$REPO" \
+              --title "$TITLE" \
+              --body-file "$RUNNER_TEMP/issue.md"
+            echo "Đã cập nhật issue #$existing"
+          fi
