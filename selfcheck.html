@@ -1,0 +1,519 @@
+<!doctype html>
+<!-- Chuyển thể từ selfcheck.html của eternity4719/HowToLiveBetter (giấy phép MIT, xem LICENSE-CODE). Đã dịch giao diện sang tiếng Việt và sửa phần đọc dữ liệu cho khớp bản dịch. -->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tự kiểm tra cuộc sống · How To Live Better (高性价比人生指南)</title>
+<meta name="description" content="Trả lời một loạt câu hỏi có/không để xem trong sách còn việc nào bạn chưa làm: nhóm nào thiếu nhiều nhất, nên làm mấy việc nào trước, việc nào làm một lần là xong. Mỗi mục có bằng chứng và nguồn riêng, không gộp thành &quot;mất mấy năm tuổi thọ&quot;.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233451b2'/%3E%3Cpath d='M17 33l10 11 20-24' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})();</script>
+<style>
+/* 配色、字体与 index.html 同一套（VitePress 默认主题） */
+:root{
+  --bg:#ffffff; --bg-alt:#f6f6f7; --bg-soft:#f6f6f7; --bg-mute:#f1f1f2;
+  --divider:#e2e2e3;
+  --t1:rgba(60,60,67,1); --t2:rgba(60,60,67,.78); --t3:rgba(60,60,67,.56);
+  --brand-1:#3451b2; --brand-2:#3a5ccc; --brand-soft:rgba(100,108,255,.14);
+  --green-1:#18794e; --green-soft:rgba(16,185,129,.14);
+  --yellow-1:#915930; --yellow-soft:rgba(234,179,8,.14);
+  --red-1:#b8272c; --red-soft:rgba(244,63,94,.14);
+  --gray-1:#565a5f; --gray-soft:rgba(142,150,170,.14);
+  --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  color-scheme:light;
+}
+html.dark{
+  --bg:#1b1b1f; --bg-alt:#161618; --bg-soft:#202127; --bg-mute:#2b2b2f;
+  --divider:#2e2e32;
+  --t1:rgba(255,255,245,.86); --t2:rgba(235,235,245,.6); --t3:rgba(235,235,245,.38);
+  --brand-1:#a8b1ff; --brand-2:#5c73e7; --brand-soft:rgba(100,108,255,.16);
+  --green-1:#3dd68c; --green-soft:rgba(16,185,129,.16);
+  --yellow-1:#f9b44e; --yellow-soft:rgba(234,179,8,.16);
+  --red-1:#f66f81; --red-soft:rgba(244,63,94,.16);
+  --gray-1:#a4a8ae; --gray-soft:rgba(142,150,170,.16);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t1);font:15px/1.75 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--brand-1);text-decoration:none}
+a:hover{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--brand-1);outline-offset:2px;border-radius:4px}
+[hidden]{display:none!important}
+.nav{position:sticky;top:0;z-index:10;height:56px;background:var(--bg);border-bottom:1px solid var(--divider);display:flex;align-items:center;gap:12px;padding:0 24px}
+.nav .title{font-weight:600;font-size:16px;color:var(--t1)}
+.nav .title:hover{text-decoration:none}
+.nav .sp{flex:1}
+.nav .back{font-size:14px;font-weight:500}
+.wrap{max-width:760px;margin:0 auto;padding:32px 24px 96px}
+h1{font-size:28px;line-height:1.3;margin:0 0 12px;font-weight:600;letter-spacing:-.01em}
+.lead{color:var(--t2);margin:0 0 28px}
+h2{font-size:18px;font-weight:600;margin:36px 0 4px;padding-top:24px;border-top:1px solid var(--divider)}
+h2 small{font-weight:400;font-size:13px;color:var(--t3);margin-left:8px}
+.q{display:flex;align-items:center;gap:16px;padding:12px 0;border-top:1px solid var(--divider)}
+h2+.q{border-top:0}
+.q .txt{flex:1;min-width:0}
+.q .txt small{display:block;color:var(--t3);font-size:13px;line-height:1.5}
+.seg{display:inline-flex;flex:none;border:1px solid var(--divider);border-radius:8px;overflow:hidden;background:var(--bg-soft)}
+.seg button{padding:5px 12px;font-size:14px;color:var(--t2);border-left:1px solid var(--divider);white-space:nowrap;transition:background .2s,color .2s}
+.seg button:first-child{border-left:0}
+.seg button:hover{color:var(--t1)}
+.seg button[aria-pressed="true"]{background:var(--brand-soft);color:var(--brand-1);font-weight:600}
+.seg button.no[aria-pressed="true"]{background:var(--red-soft);color:var(--red-1)}
+.seg button.yes[aria-pressed="true"]{background:var(--green-soft);color:var(--green-1)}
+.profile-age{width:7em;padding:6px 10px;border:1px solid var(--divider);border-radius:8px;background:var(--bg-soft);color:var(--t1);font:inherit}
+.bar{position:sticky;bottom:0;margin-top:32px;padding:14px 0;background:var(--bg);border-top:1px solid var(--divider);display:flex;align-items:center;gap:16px}
+.bar .prog{flex:1;color:var(--t2);font-size:14px}
+.btn{border-radius:20px;padding:0 20px;line-height:38px;font-weight:600;font-size:14px;background:var(--brand-1);color:#fff;transition:background .2s}
+html.dark .btn{color:#1b1b1f}
+.btn:hover{background:var(--brand-2)}
+.btn.ghost{background:var(--bg-mute);color:var(--t1)}
+.btn.ghost:hover{background:var(--divider)}
+.sum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:8px 0 12px}
+.tile{background:var(--bg-soft);border-radius:10px;padding:14px 16px}
+.tile b{display:block;font-size:26px;line-height:1.2;font-variant-numeric:tabular-nums}
+.tile span{font-size:13px;color:var(--t2)}
+.tile.r3 b{color:var(--brand-1)} .tile.r2 b{color:var(--green-1)}
+.note{font-size:13.5px;color:var(--t2);background:var(--bg-soft);border-radius:8px;padding:12px 16px;margin:20px 0}
+.note b{color:var(--t1)}
+.card{border:1px solid var(--divider);border-radius:12px;padding:16px 20px;margin:12px 0;background:var(--bg)}
+.card .h{display:flex;gap:10px;align-items:baseline}
+.card .h b{flex:1;font-size:16px;font-weight:600;line-height:1.5}
+.card .h a{flex:none;font-size:13px;white-space:nowrap}
+.card .human{margin:8px 0 10px;color:var(--t1)}
+.card .cost{font-size:13.5px;color:var(--t2);margin-top:6px}
+.card .caution{font-size:13.5px;color:var(--t2);background:var(--yellow-soft);border-radius:8px;padding:10px 12px;margin:10px 0}
+.card .caution summary{cursor:pointer;font-weight:600;color:var(--t1)}
+.card .caution[open] summary{margin-bottom:6px}
+.card .also{margin-top:10px;padding-top:10px;border-top:1px dashed var(--divider);font-size:13.5px;color:var(--t2)}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{display:inline-block;border-radius:10px;padding:0 10px;line-height:20px;font-size:12px;font-weight:600;white-space:nowrap}
+.badge.A{background:var(--green-soft);color:var(--green-1)}
+.badge.B{background:var(--yellow-soft);color:var(--yellow-1)}
+.badge.C{background:var(--gray-soft);color:var(--gray-1)}
+.badge.r3{background:var(--brand-soft);color:var(--brand-1)}
+.badge.r2{background:var(--green-soft);color:var(--green-1)}
+.badge.r1,.badge.plain{background:var(--gray-soft);color:var(--gray-1)}
+.badge.warn{background:var(--yellow-soft);color:var(--yellow-1)}
+.verdict{font-size:16px;line-height:1.85;margin:0 0 20px}
+.verdict b{font-weight:600}
+.mods{display:flex;flex-wrap:wrap;gap:8px}
+.mods button{border:1px solid var(--divider);border-radius:16px;padding:3px 14px;font-size:14px;color:var(--t2);background:var(--bg-soft)}
+.mods button[aria-pressed="true"]{border-color:var(--brand-1);background:var(--brand-soft);color:var(--brand-1);font-weight:600}
+.hbar{display:grid;grid-template-columns:15em 1fr 4.5em;align-items:center;gap:12px;padding:6px 0;font-size:14px}
+.hbar .nm{color:var(--t1)}
+@media (max-width:640px){.hbar{grid-template-columns:1fr 4.5em}.hbar .tr{grid-column:1/-1;grid-row:2}}
+.hbar .tr{height:10px;border-radius:5px;background:var(--bg-mute);overflow:hidden}
+.hbar .fl{height:100%;border-radius:0 4px 4px 0;background:var(--brand-1)}
+.hbar .v{color:var(--t2);text-align:right;font-variant-numeric:tabular-nums}
+.top3{margin:8px 0 0;padding-left:22px}
+.top3 li{margin:6px 0}
+.top3 .why{color:var(--t2);font-size:13.5px}
+.copy-tools{margin-top:12px}
+.copy-status{margin:8px 0 0;color:var(--t2);font-size:14px}
+.copy-tools label{display:block;margin:12px 0 4px;font-size:14px}
+.copy-tools textarea{display:block;width:100%;padding:12px;border:1px solid var(--divider);border-radius:8px;background:var(--bg-soft);color:var(--t1);font:inherit;font-size:14px;resize:vertical}
+.copy-tools button:disabled{cursor:wait;opacity:.65}
+.card{scroll-margin-top:72px}
+.done-list{color:var(--t2);font-size:14px;padding-left:20px}
+#status{color:var(--t2);padding:40px 0;text-align:center}
+@media (max-width:640px){
+  .nav{padding:0 16px}
+  .wrap{padding:24px 16px 80px}
+  h1{font-size:24px}
+  .q{flex-direction:column;align-items:stretch;gap:8px}
+  .seg{align-self:flex-start}
+  .sum{grid-template-columns:repeat(2,1fr)}
+  .hbar{grid-template-columns:7.5em 1fr 3.8em;gap:8px}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="title" href="./">How To Live Better</a>
+  <span class="sp"></span>
+  <a class="back" href="./">Về trang tra cứu</a>
+</header>
+<main class="wrap">
+  <div id="status">Đang đọc nội dung …</div>
+
+  <section id="ask" hidden>
+    <h1>Tự kiểm tra cuộc sống</h1>
+    <p class="lead">Trả lời các câu hỏi dưới đây để xem trong sách còn việc nào bạn chưa làm. Kết quả cho biết nhóm nào thiếu nhiều nhất, nên làm mấy việc nào trước, việc nào làm một lần là xong. Mỗi mục có bằng chứng và nguồn riêng, không gộp thành một con điểm. Lưu ý: luật và thủ tục trong sách là của Trung Quốc, câu hỏi nào không hợp với bạn thì chọn "Bỏ qua".</p>
+    <div id="qs"><div id="profile-qs"></div><div id="topic-qs"></div></div>
+    <div class="bar">
+      <span class="prog" id="prog"></span>
+      <button class="btn ghost" id="reset" type="button">Xóa hết</button>
+      <button class="btn" id="go" type="button">Xem kết quả</button>
+    </div>
+  </section>
+
+  <section id="out" hidden>
+    <h1>Kết quả tự kiểm tra</h1>
+    <p class="verdict" id="verdict"></p>
+    <div class="sum" id="sum"></div>
+    <h2>Nhóm nào thiếu nhiều nhất<small>xếp theo tỷ lệ làm được từ thấp đến cao</small></h2>
+    <div id="bars"></div>
+    <div id="todo"></div>
+    <div class="note"><b>Vì sao không tính "mất mấy năm tuổi thọ":</b> số liệu của mỗi mục đến từ những nghiên cứu và nhóm người khác nhau, hơn nữa hút thuốc, lười vận động, ngủ kém thường đi cùng nhau. Nhân các nguy cơ lại với nhau sẽ tính trùng, số năm ra sẽ lớn hơn thực tế và lớn hơn bao nhiêu thì không rõ. Vì vậy mỗi mục chỉ đưa bằng chứng của riêng nó.</div>
+    <h2 id="done-h">Việc đã làm được</h2>
+    <ul class="done-list" id="done"></ul>
+    <div class="bar">
+      <span class="prog">Câu trả lời chỉ lưu trong trình duyệt trên thiết bị này.</span>
+      <button class="btn ghost" id="back" type="button">Sửa câu trả lời</button>
+    </div>
+  </section>
+</main>
+
+<script>
+/* Bảng câu hỏi. Mỗi câu trỏ tới một mục bằng (chương sec, số thứ tự n). Nếu chèn thêm mục ở giữa chương thì phải sửa lại n.
+   Không tìm thấy mục thì báo lỗi trong console và bỏ câu đó.
+   when(p) quyết định hỏi câu này hay không theo thông tin cơ bản; also là các mục liên quan liệt kê kèm khi chưa làm được. */
+const PROFILE = [
+  {id:'ageYears', text:'Tuổi của bạn (tuổi tròn)', type:'number'},
+  {id:'sex', text:'Giới tính của bạn', opts:[['m','Nam'],['f','Nữ']]},
+  {id:'kid', text:'Nhà bạn có trẻ dưới 4 tuổi không', opts:[['y','Có'],['n','Không']]},
+];
+const validAge = age => age !== undefined && age !== null && String(age).trim() !== ''
+  && Number.isInteger(Number(age)) && Number(age) >= 0 && Number(age) <= 120;
+const ageAtLeast = (p, a) => validAge(p.ageYears) && Number(p.ageYears) >= a;
+const GROUPS = [
+  {name:'Thuốc lá, rượu và trầu cau', mod:'Cơ thể', qs:[
+    {sec:2, n:1, text:"Không hút thuốc, hoặc đã bỏ rồi", also:[{sec:2, n:3},{sec:2, n:5}]},
+    {sec:2, n:19, text:"Không uống rượu, hoặc rất ít"},
+    {sec:2, n:8, text:"Không nhai trầu cau"},
+  ]},
+  {name:'Ăn uống', mod:'Cơ thể', qs:[
+    {sec:2, n:7, text:"Gần như không uống trà sữa, cola, nước ép và các đồ uống có đường khác"},
+    {sec:2, n:18, text:"Hiếm khi ăn giăm bông, xúc xích, thịt xông khói, thịt hộp"},
+    {sec:2, n:24, text:"Một phần cơm bột trong bữa ăn là ngũ cốc nguyên hạt như gạo lứt, yến mạch, bột mì nguyên cám"},
+    {sec:2, n:27, text:"Mỗi ngày ăn đủ khoảng nửa ký rau và trái cây"},
+    {sec:2, n:22, text:"Mỗi ngày ăn một nắm nhỏ các loại hạt"},
+    {sec:2, n:9, text:"Nấu ăn ở nhà dùng muối ít natri", hint:"Người suy thận hoặc đang dùng thuốc giữ kali phải hỏi bác sĩ trước khi đổi muối. Không áp dụng thì bỏ qua"},
+    {sec:2, n:30, text:"Trà nóng, canh nóng để nguội bớt rồi mới uống, không uống đồ quá nóng"},
+    {sec:2, n:42, text:"Khi xào nấu bật máy hút mùi từ lúc nhóm bếp đến lúc xong", hint:"Không nấu ăn thì bỏ qua"},
+  ]},
+  {name:'Vận động, ngủ và nắng', mod:'Cơ thể', qs:[
+    {sec:2, n:11, text:"Mỗi ngày đi bộ khoảng 7000 bước, hoặc mỗi tuần đi bộ nhanh tổng cộng trên 150 phút"},
+    {sec:2, n:16, text:"Mỗi tuần tập chút sức mạnh (hít đất, squat, dụng cụ đều tính)"},
+    {sec:2, n:17, text:"Không ngồi liền nhiều giờ không đứng dậy"},
+    {sec:2, n:13, text:"Mỗi đêm ngủ khoảng 7 tiếng, giờ giấc cơ bản cố định"},
+    {sec:2, n:31, text:"Ban ngày có ra ngoài đón nắng, không ở trong nhà cả ngày"},
+    {sec:2, n:32, text:"Cân nặng trong khoảng bình thường (BMI 20 đến 25)", hint:"BMI = cân nặng (kg) chia cho bình phương chiều cao (m)"},
+    {sec:2, n:10, text:"Mỗi ngày đánh răng kỹ, làm sạch kẽ răng một lần, mất răng thì đi làm răng giả"},
+    {sec:1, n:13, text:"Đã tập thăng bằng và sức chân, phòng tắm cầu thang đã lắp tay vịn chống trơn", when:p => ageAtLeast(p,60)},
+  ]},
+  {name:'An toàn ngoài đường và trong nhà', mod:'Cơ thể', qs:[
+    {sec:1, n:1, text:"Đi xe thì cả ghế trước và ghế sau đều thắt dây an toàn"},
+    {sec:1, n:9, text:"Lái xe không chạy quá tốc độ, không lái xe sau khi uống rượu", hint:"Không lái xe thì bỏ qua"},
+    {sec:1, n:2, text:"Đi xe điện, xe máy đội mũ bảo hiểm và cài quai", hint:"Không đi thì bỏ qua"},
+    {sec:1, n:6, text:"Không dắt xe điện vào hành lang chung cư, không sạc xe trong nhà", hint:"Không có xe điện thì bỏ qua"},
+    {sec:1, n:3, text:"Nhà có lắp đầu báo khói"},
+    {sec:1, n:4, text:"Ống dẫn gas và bếp gas hết hạn đã thay, không tự sửa đường ống", hint:"Nhà không dùng gas thì bỏ qua"},
+    {sec:1, n:5, text:"Không hái, không mua, không ăn nấm dại"},
+    {sec:1, n:30, text:"Quan hệ với bạn tình không cố định thì dùng bao cao su suốt quá trình", hint:"Không có tình huống này thì bỏ qua"},
+    {sec:1, n:10, text:"Trẻ đi xe ngồi ghế an toàn, không bế trên tay", when:p => p.kid === 'y'},
+    {sec:1, n:11, text:"Cửa sổ và ban công có lắp chặn hoặc lan can", when:p => p.kid === 'y'},
+  ]},
+  {name:'Dùng thuốc', mod:'Cơ thể', qs:[
+    {sec:34, n:1, text:"Trước khi uống cùng lúc hai loại thuốc cảm hoặc giảm đau, có xem bảng thành phần"},
+    {sec:34, n:7, text:"Cảm thông thường không xin bác sĩ thuốc kháng sinh"},
+    {sec:34, n:11, text:"Trong lúc dùng cefa, metronidazol và một tuần sau khi ngưng thuốc không uống rượu"},
+    {sec:2, n:12, text:"Có tăng huyết áp, mỡ máu cao thì uống thuốc đều theo chỉ định bác sĩ", hint:"Không có các bệnh này thì bỏ qua"},
+  ]},
+  {name:'Khám và tiêm chủng', mod:'Cơ thể', qs:[
+    {sec:1, n:7, text:"Trong một năm qua có đo huyết áp, nếu cao thì đang dùng thuốc kiểm soát"},
+    {sec:1, n:8, text:"Đã xét nghiệm đường huyết lúc đói", hint:"Mục này dành cho người thừa cân, không áp dụng thì bỏ qua", when:p => ageAtLeast(p,35)},
+    {sec:1, n:14, rev:2, text:"Đã kiểm tra lịch sử tiêm vắc-xin viêm gan B, ai cần tiêm bổ sung đã tiêm theo lời bác sĩ", hint:"Sau khi tiêm, kháng thể giảm xuống chưa chắc cần tiêm lại. Không chắc thì xem mục gốc trước"},
+    {sec:1, n:23, text:"Đã kiểm tra vi khuẩn H. pylori (HP)"},
+    {sec:1, n:16, text:"Đã tiêm vắc-xin HPV", when:p => p.sex === 'f'},
+    {sec:1, n:18, text:"Đã tầm soát ung thư cổ tử cung", when:p => p.sex === 'f' && ageAtLeast(p,30)},
+    {sec:1, n:17, text:"Trong hai năm qua đã chụp nhũ ảnh", when:p => p.sex === 'f' && ageAtLeast(p,40)},
+    {sec:1, n:19, text:"Đã tầm soát ung thư đại trực tràng (xét nghiệm máu ẩn trong phân hoặc nội soi đại tràng)", when:p => ageAtLeast(p,45)},
+    {sec:1, n:20, text:"Mỗi năm tiêm vắc-xin cúm", when:p => ageAtLeast(p,60)},
+    {sec:1, n:21, text:"Đã tiêm vắc-xin zona", when:p => ageAtLeast(p,50)},
+    {sec:1, n:22, text:"Đã tiêm vắc-xin phế cầu", when:p => ageAtLeast(p,65)},
+    {sec:1, n:39, text:"Đã đo mật độ xương", when:p => p.sex === 'f' && ageAtLeast(p,65)},
+  ]},
+  {name:'Sơ cấp cứu', mod:'Sơ cấp cứu', qs:[
+    {sec:13, n:1, text:"Thấy người ngã xuống, gọi không đáp, không thở bình thường thì biết phải ấn mạnh vào giữa ngực ngay và nhờ người xung quanh tìm máy AED"},
+    {sec:13, n:3, text:"Biết rằng miệng đột nhiên méo, một tay yếu thì phải gọi cấp cứu ngay (120 ở Trung Quốc, 115 ở Việt Nam), không tự lái xe đi"},
+    {sec:13, n:7, text:"Biết rằng đau tức nặng ngực quá 15 phút không đỡ thì phải gọi cấp cứu"},
+    {sec:13, n:26, text:"Biết vỗ lưng kèm ép bụng cho người bị nghẹn"},
+    {sec:13, n:14, text:"Biết bị bỏng thì xả nước mát chảy 20 phút trước, không bôi kem đánh răng hay nước tương"},
+    {sec:13, n:13, text:"Bị chó mèo cắn hoặc cào rách da thì rửa trước rồi đi tiêm phòng ngay trong ngày"},
+    {sec:13, n:20, text:"Biết rằng uống nhầm chất tẩy rửa, thuốc trừ sâu thì không gây nôn, mang theo chai đến bệnh viện"},
+    {sec:13, n:24, text:"Biết khi cháy thì cúi sát đất, sờ cửa trước, đi cầu thang bộ không đi thang máy"},
+    {sec:13, n:43, text:"Biết vỗ lưng kèm ấn ngực cho trẻ dưới 1 tuổi bị nghẹn", when:p => p.kid === 'y'},
+  ]},
+  {name:'Sức lực và tâm trạng', mod:'Sức lực', qs:[
+    {sec:3, n:1, text:"Đã tắt các thông báo không cần thiết trên điện thoại, lúc làm việc để điện thoại ngoài tầm nhìn"},
+    {sec:3, n:2, text:"Cuối tuần cơ bản vẫn dậy theo giờ thường ngày"},
+    {sec:3, n:4, text:"Sau 2 giờ chiều không uống cà phê, trà đặc"},
+    {sec:3, n:9, text:"Không thức khuya vì chơi game, lướt video ngắn"},
+    {sec:3, n:8, text:"Một tiếng trước khi ngủ không xem điện thoại"},
+    {sec:3, n:20, text:"Không ngày nào cũng lướt xem bài đăng của người bằng tuổi"},
+    {sec:3, n:13, text:"Mỗi tuần làm việc cơ bản không quá 50 tiếng", hint:"Không đi làm thì bỏ qua"},
+    {sec:3, n:16, text:"Yêu cầu không muốn nhận thì nói được chữ \"không\""},
+    {sec:22, n:9, text:"Thường xuyên gặp bạn bè người thân, không chỉ khi tâm trạng xấu mới tìm người"},
+  ]},
+  {name:'Tiền', mod:'Tiền', qs:[
+    {sec:5, n:1, text:"Đã tắt các gói tự động gia hạn không dùng"},
+    {sec:5, n:2, text:"Mỗi năm quyết toán thuế thu nhập cá nhân, các khoản giảm trừ đáng khai đều đã khai", hint:"Không có thu nhập từ lương thì bỏ qua"},
+    {sec:5, n:7, text:"Không dùng mức trả tối thiểu của thẻ tín dụng, không vay trả góp tiêu dùng hay vay tiêu dùng"},
+    {sec:5, n:27, text:"Có quỹ khẩn cấp bằng 3 đến 6 tháng chi tiêu, rút ra được bất cứ lúc nào"},
+    {sec:5, n:6, text:"Thấy chữ \"bảo toàn vốn\", \"lợi nhuận cao\", \"chắc chắn lời\" thì bỏ đi ngay"},
+    {sec:5, n:13, text:"Đã đăng ký chia sẻ tài khoản bảo hiểm y tế trong gia đình trên ứng dụng bảo hiểm y tế", hint:"Không có bảo hiểm y tế người lao động thì bỏ qua"},
+    {sec:5, n:26, text:"Nếu lái xe thì đã mua đủ bảo hiểm bên thứ ba", hint:"Không có xe thì bỏ qua"},
+    {sec:5, n:40, text:"Trong nhà có người sống nhờ thu nhập của bạn, bạn đã mua bảo hiểm nhân thọ định kỳ", hint:"Không ai trong nhà sống nhờ thu nhập của bạn thì bỏ qua"},
+    {sec:5, n:17, text:"Tiền đầu tư dài hạn để vào quỹ chỉ số diện rộng, không để vào quỹ chủ động hay cổ phiếu lẻ", hint:"Không đầu tư thì bỏ qua"},
+  ]},
+  {name:'Tài khoản và chống lừa đảo', mod:'Tài khoản và chống lừa đảo', qs:[
+    {sec:14, n:1, text:"Email, thanh toán, mạng xã hội đều đã bật xác thực hai lớp"},
+    {sec:14, n:2, text:"Mật khẩu email riêng một cái, chưa dùng ở trang web khác"},
+    {sec:14, n:3, text:"Điện thoại có đặt mật khẩu khóa màn hình, SIM có đặt mã PIN"},
+    {sec:8, n:4, text:"Người nhà gọi video hoặc điện thoại bảo chuyển tiền thì cúp máy trước, gọi lại bằng số cũ trong danh bạ để xác minh"},
+    {sec:8, n:8, text:"Không bao giờ cho người khác mượn thẻ ngân hàng, SIM, tài khoản thanh toán"},
+    {sec:8, n:9, text:"Đã tra báo cáo tín dụng của mình"},
+    {sec:8, n:17, text:"Trước khi ký thì đọc hết giấy, không ký lên giấy trắng"},
+  ]},
+];
+const MODS = ['Cơ thể', 'Sơ cấp cứu', 'Sức lực', 'Tiền', 'Tài khoản và chống lừa đảo'];
+const modOn = m => ans['mod:' + m] !== 'off';
+
+/* 解析：和 index.html 的 parseReadme 同一套格式，只取这里用得到的字段 */
+const COST_W = { money:{'0':0,'少':1,'多':2}, time:{'少':0,'中':1,'多':2}, will:{'否':0,'些':1,'是':2} };
+function parse(md){
+  const out = []; let sec = null, e = null; let m;
+  for (const raw of md.split(/\r?\n/)){
+    const line = raw.trimEnd();
+    if ((m = /^#{1,2} (\d+)\. /.exec(line))) { sec = +m[1]; e = null; continue; }
+    if ((m = /^### (\d+)\. (.+)$/.exec(line)) && sec) { e = {sec, n:+m[1], title:m[2].trim(), human:'', cost:'', grade:'', note:''}; out.push(e); continue; }
+    if (!e) continue;
+    if ((m = /^\x3c!--\s*成本标签:\s*(.*?)\s*-->/.exec(line))){
+      for (const kv of m[1].split(/\s+/)){ const [k,v] = kv.split('='); const p = {'钱':'money','时间':'time','毅力':'will','收益':'level','口径':'lens'}[k]; if (p) e[p] = v; }
+    }
+    else if ((m = /^- Nói dễ hiểu:\s*(.*)$/.exec(line))) e.human = m[1];
+    else if ((m = /^- Chi phí:\s*(.*)$/.exec(line))) e.cost = m[1];
+    else if ((m = /^- Mức bằng chứng:\s*([ABC])/.exec(line))) e.grade = m[1];
+    else if ((m = /^- Ghi chú:\s*(.*)$/.exec(line))) e.note = m[1];
+  }
+  for (const x of out){
+    x.cs = (COST_W.money[x.money] ?? 0) + (COST_W.time[x.time] ?? 0) + (COST_W.will[x.will] ?? 0);
+    x.ratio = x.level === '大' ? (x.cs === 0 ? '极高' : (x.cs <= 2 ? '高' : '一般'))
+            : x.level === '中' ? (x.cs === 0 ? '高' : '一般') : '一般';
+    x.dispute = /^(Có )?[Tt]ranh cãi/.test(x.note);
+  }
+  return out;
+}
+const plain = s => s.replace(/\*\*/g, '').replace(/\\([*_])/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+const esc = s => s.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+
+let ENTRIES = [];
+const find = (sec, n) => {
+  const hit = ENTRIES.find(x => x.sec === sec && x.n === n);
+  if (!hit) console.error(`Câu hỏi không tìm thấy mục: chương ${sec}, mục ${n}`);
+  return hit;
+};
+
+/* 答案：只存本机浏览器，取不到也照常能用 */
+const STORE = 'selfcheck-v1';
+let ans = {};
+try { ans = JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) {}
+const save = () => { try { localStorage.setItem(STORE, JSON.stringify(ans)); } catch (e) {} };
+const profile = () => Object.fromEntries(PROFILE.map(p => [p.id, ans['p:'+p.id]]));
+// 使用新字段 ageYears，旧版年龄段答案不会被当成实际年龄；其他答案保留。
+const profileDone = () => PROFILE.every(p => p.type === 'number'
+  ? validAge(ans['p:'+p.id]) : p.opts.some(([v]) => v === ans['p:'+p.id]));
+const qid = q => q.sec + ':' + q.n + (q.rev ? ':v' + q.rev : '');
+const shown = (q, p) => q.entry && modOn(q.g.mod) && (!q.when || (profileDone() && q.when(p)));
+const activeQs = () => { const p = profile(); return GROUPS.flatMap(g => g.qs).filter(q => shown(q, p)); };
+
+function seg(name, opts, cur){
+  return `<div class="seg" role="group">` + opts.map(([v, t, cls]) =>
+    `<button type="button" data-k="${esc(name)}" data-v="${v}" class="${cls||''}" aria-pressed="${cur === v}">${t}</button>`).join('') + `</div>`;
+}
+const YN = [['y','Đã làm','yes'],['n','Chưa làm','no'],['s','Bỏ qua']];
+
+function renderAsk(updateProfile = true){
+  const p = profile();
+  let h = `<h2 style="border-top:0;padding-top:0;margin-top:0">Thông tin cơ bản<small>quyết định hỏi những câu nào</small></h2>`;
+  for (const f of PROFILE) {
+    const control = f.type === 'number'
+      ? `<input class="profile-age" id="profile-age" type="number" inputmode="numeric" min="0" max="120" step="1" data-k="p:${f.id}" aria-label="${f.text}" value="${esc(String(ans['p:'+f.id] ?? ''))}">`
+      : seg('p:'+f.id, f.opts, ans['p:'+f.id]);
+    h += `<div class="q"><div class="txt">${f.text}</div>${control}</div>`;
+  }
+  h += `<div class="q"><div class="txt">Muốn kiểm tra nhóm nào<small>bấm để bỏ, nhóm bỏ đi sẽ không hỏi</small></div><div class="mods">`
+    + MODS.map(m => `<button type="button" data-mod="${m}" aria-pressed="${modOn(m)}">${m}</button>`).join('') + `</div></div>`;
+  if (updateProfile) document.getElementById('profile-qs').innerHTML = h;
+  h = '';
+  for (const g of GROUPS){
+    const qs = g.qs.filter(q => shown(q, p));
+    if (!qs.length) continue;
+    h += `<h2>${g.name}</h2>`;
+    for (const q of qs) h += `<div class="q"><div class="txt">${esc(q.text)}${q.hint ? `<small>${esc(q.hint)}</small>` : ''}</div>${seg(qid(q), YN, ans[qid(q)])}</div>`;
+  }
+  document.getElementById('topic-qs').innerHTML = h;
+  const qs = activeQs(), n = qs.filter(q => ans[qid(q)]).length;
+  document.getElementById('prog').textContent = profileDone() ? `Đã trả lời ${n} / ${qs.length} câu` : 'Điền thông tin cơ bản trước';
+}
+
+const RATIO_VI = {'极高':'rất cao','高':'cao','一般':'bình thường'}, LEVEL_VI = {'大':'lớn','中':'vừa','小':'nhỏ'}, LENS_VI = {'死亡率':'tuổi thọ','金钱':'tiền','时间':'thời gian','自由':'tự do thân thể'};
+const RANK = {'极高':0,'高':1,'一般':2}, LV = {'大':0,'中':1,'小':2}, GR = {A:0,B:1,C:2};
+function card(e, also){
+  const r = {'极高':'r3','高':'r2','一般':'r1'}[e.ratio];
+  const lens = e.lens ? `<span class="badge plain">Khía cạnh: ${LENS_VI[e.lens] || e.lens}</span>` : '';
+  const alsoH = also.length ? `<div class="also">Việc liên quan: ` + also.map(a =>
+    `<a href="./#e-${a.sec}-${a.n}">${esc(plain(a.title))}</a>`).join('; ') + `</div>` : '';
+  return `<div class="card" id="c-${e.sec}-${e.n}">
+    <div class="h"><b>${esc(plain(e.title))}</b><a href="./#e-${e.sec}-${e.n}">Mục ${e.n} chương ${e.sec} →</a></div>
+    ${e.note ? `<details class="caution"><summary>Điều kiện áp dụng và lưu ý</summary>${esc(plain(e.note))}</details>` : ''}
+    ${e.human ? `<div class="human">${esc(plain(e.human))}</div>` : ''}
+    <div class="badges"><span class="badge ${r}">Đáng đồng tiền: ${RATIO_VI[e.ratio]}</span><span class="badge ${e.grade}">Bằng chứng mức ${e.grade}</span><span class="badge plain">Lợi ích ${LEVEL_VI[e.level] || e.level}</span>${lens}${e.dispute ? '<span class="badge warn">Có tranh cãi</span>' : ''}</div>
+    <div class="cost">Phải bỏ ra: ${esc(plain(e.cost))}</div>${alsoH}
+  </div>`;
+}
+/* 没做到的事按「要不要改习惯」分三堆：成本标签里的毅力一项直接决定 */
+const PILES = [
+  {will:'否', name:'Làm một lần là xong', sub:'làm một lần hoặc nhớ là đủ, không cần đổi thói quen'},
+  {will:'些', name:'Phải đổi một thói quen', sub:'chịu khó một chút, vài tuần sẽ thành thói quen'},
+  {will:'是', name:'Phải bền bỉ lâu dài', sub:'phải chống lại quán tính lâu dài, khó nhất, chọn một việc làm dần'},
+];
+const WILL = {'否':0,'些':1,'是':2};
+const byValue = (a, b) => RANK[a.entry.ratio] - RANK[b.entry.ratio] || LV[a.entry.level] - LV[b.entry.level]
+  || WILL[a.entry.will] - WILL[b.entry.will] || GR[a.entry.grade] - GR[b.entry.grade] || a.entry.cs - b.entry.cs;
+function renderOut(){
+  const qs = activeQs();
+  const no = qs.filter(q => ans[qid(q)] === 'n').sort(byValue), yes = qs.filter(q => ans[qid(q)] === 'y');
+  const answered = no.length + yes.length;
+
+  // 各块做到的比例，只算答了「做到 / 没做到」的题，跳过的不进分母
+  const groups = GROUPS.map(g => {
+    const y = yes.filter(q => q.g === g).length, n = no.filter(q => q.g === g).length;
+    return {g, y, t:y + n, pct: y + n ? y / (y + n) : 1};
+  }).filter(r => r.t).sort((a, b) => a.pct - b.pct || b.t - a.t);
+  document.getElementById('bars').innerHTML = groups.map(r =>
+    `<div class="hbar" title="${esc(r.g.name)}: đã trả lời ${r.t} câu, làm được ${r.y}"><span class="nm">${esc(r.g.name)}</span>`
+    + `<span class="tr"><span class="fl" style="display:block;width:${(r.pct * 100).toFixed(0)}%"></span></span>`
+    + `<span class="v">${r.y} / ${r.t}</span></div>`).join('');
+
+  const easy = no.filter(q => q.entry.will === '否'), free = easy.filter(q => q.entry.money === '0');
+  const good = no.filter(q => q.entry.ratio !== '一般'), disp = no.filter(q => q.entry.dispute);
+  const weak = groups.find(r => r.t >= 2 && r.pct < 1);
+  let v = `Bạn đã trả lời ${answered} câu, làm được <b>${yes.length}</b>, chưa làm <b>${no.length}</b>.`;
+  if (answered > 0 && !no.length) v += ' Những việc này trong sách bạn đều đã làm.';
+  else if (!answered) v += ' Bạn chưa trả lời câu cụ thể nào, hãy quay lại trả lời rồi xem phân tích.';
+  if (weak) v += ` Nhóm thiếu nhiều nhất là "${esc(weak.g.name)}", ${weak.t} việc mới làm được ${weak.y}.`;
+  if (easy.length) v += ` Trong số chưa làm có <b>${easy.length}</b> việc làm một lần là xong, không cần đổi thói quen` + (free.length ? `, trong đó ${free.length} việc không tốn tiền.` : '.');
+  if (disp.length) v += ` Có ${disp.length} mục bằng chứng còn tranh cãi, hãy xem ghi chú ở mục gốc rồi quyết định.`;
+  document.getElementById('verdict').innerHTML = v;
+
+  document.getElementById('sum').innerHTML =
+    `<div class="tile"><b>${answered ? Math.round(yes.length / answered * 100) : 0}%</b><span>Tỷ lệ làm được trong số câu đã trả lời</span></div>` +
+    `<div class="tile"><b>${no.length}</b><span>Chưa làm được</span></div>` +
+    `<div class="tile r3"><b>${good.length}</b><span>Trong đó đáng đồng tiền cao hoặc rất cao</span></div>` +
+    `<div class="tile r2"><b>${easy.length}</b><span>Trong đó làm một lần là xong</span></div>`;
+
+  // 先做这三件：性价比最高的排前；同档里先挑不用改习惯的
+  const top = no.slice(0, 3);
+  const topTitle = `Làm trước ${top.length === 3 ? 'ba' : top.length === 2 ? 'hai' : 'một'} việc này`;
+  const alsoOf = q => (q.also || []).map(a => find(a.sec, a.n)).filter(Boolean);
+  let h = '';
+  if (top.length) h += `<h2>${topTitle}<small>đáng đồng tiền nhất trong số chưa làm</small></h2><ol class="top3">`
+    + top.map(q => `<li><a href="#c-${q.entry.sec}-${q.entry.n}">${esc(plain(q.entry.title))}</a> <span class="why">Đáng đồng tiền ${RATIO_VI[q.entry.ratio]}, bằng chứng mức ${q.entry.grade}, ${PILES.find(p => p.will === q.entry.will)?.name ?? ''}</span></li>`).join('') + '</ol>'
+    + `<div class="copy-tools">
+      <button class="btn" id="copy-actions" type="button">Sao chép các việc này</button>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="copy-fallback" hidden>
+        <label for="copy-text">Danh sách việc cần làm</label>
+        <textarea id="copy-text" rows="10" readonly aria-describedby="copy-status"></textarea>
+      </div>
+    </div>`;
+  for (const p of PILES){
+    const list = no.filter(q => q.entry.will === p.will);
+    if (!list.length) continue;
+    h += `<h2>${p.name} (${list.length})<small>${p.sub}</small></h2>` + list.map(q => card(q.entry, alsoOf(q))).join('');
+  }
+  document.getElementById('todo').innerHTML = h;
+  if (top.length) document.getElementById('copy-text').value = `How To Live Better · ${topTitle}\n\n` + top.map(({entry:e}) =>
+    `- [ ] ${plain(e.title)}\n`
+    + `  Đáng đồng tiền ${RATIO_VI[e.ratio]}, bằng chứng mức ${e.grade}, ${PILES.find(p => p.will === e.will)?.name ?? ''}${e.dispute ? ', có tranh cãi (xem ghi chú ở mục gốc)' : ''}\n`
+    + `  Phải bỏ ra: ${plain(e.cost)}\n`
+    + (e.note ? `  Điều kiện áp dụng và lưu ý: ${plain(e.note)}\n` : '')
+    + `  https://eternity4719.github.io/HowToLiveBetter/#e-${e.sec}-${e.n}`).join('\n\n');
+  document.getElementById('done').innerHTML = yes.map(q =>
+    `<li><a href="./#e-${q.entry.sec}-${q.entry.n}">${esc(plain(q.entry.title))}</a></li>`).join('');
+  document.getElementById('done-h').hidden = !yes.length;
+}
+
+function show(which){
+  document.getElementById('ask').hidden = which !== 'ask';
+  document.getElementById('out').hidden = which !== 'out';
+  scrollTo(0, 0);
+}
+
+document.getElementById('todo').addEventListener('click', async ev => {
+  const b = ev.target.closest('#copy-actions'); if (!b) return;
+  const status = document.getElementById('copy-status'), fallback = document.getElementById('copy-fallback');
+  const text = document.getElementById('copy-text');
+  b.disabled = true;
+  fallback.hidden = true;
+  status.textContent = 'Đang sao chép…';
+  try {
+    await navigator.clipboard.writeText(text.value);
+    if (b.isConnected && !document.getElementById('out').hidden) status.textContent = 'Đã sao chép, bạn có thể dán vào ghi chú hoặc ứng dụng việc cần làm.';
+  } catch (err) {
+    // 等待剪贴板权限时可能已经返回改答案，不把焦点拉回旧结果。
+    if (!b.isConnected || document.getElementById('out').hidden) return;
+    fallback.hidden = false;
+    status.textContent = 'Không tự sao chép được, hãy sao chép danh sách bên dưới bằng tay.';
+    text.focus();
+    text.select();
+    text.scrollTop = 0;
+  } finally {
+    b.disabled = false;
+  }
+});
+
+document.getElementById('qs').addEventListener('click', ev => {
+  const mb = ev.target.closest('button[data-mod]');
+  if (mb) { ans['mod:' + mb.dataset.mod] = modOn(mb.dataset.mod) ? 'off' : undefined; save(); renderAsk(); return; }
+  const b = ev.target.closest('button[data-k]'); if (!b) return;
+  ans[b.dataset.k] = ans[b.dataset.k] === b.dataset.v ? undefined : b.dataset.v;
+  save(); renderAsk();
+});
+document.getElementById('qs').addEventListener('input', ev => {
+  if (!ev.target.matches('input[data-k="p:ageYears"]')) return;
+  ans['p:ageYears'] = ev.target.value;
+  // 保留年龄输入框和基本情况按钮，避免失焦重绘吞掉紧接着的点击。
+  save(); renderAsk(false);
+});
+document.getElementById('go').addEventListener('click', () => {
+  if (!profileDone()) { document.getElementById('prog').textContent = 'Hãy điền đủ thông tin cơ bản, tuổi là số nguyên từ 0 đến 120'; return; }
+  renderOut(); show('out');
+});
+document.getElementById('back').addEventListener('click', () => show('ask'));
+document.getElementById('reset').addEventListener('click', () => { ans = {}; save(); renderAsk(); });
+
+(async function init(){
+  const status = document.getElementById('status');
+  try {
+    const EMBED = window.__CORPUS__;
+    const readme = EMBED ? EMBED.readme : await (await fetch('README.md', {cache:'no-cache'})).text();
+    const files = [...new Set(Array.from(readme.matchAll(/\]\((book\/[^)]+\.md)\)/g), m => m[1]))]
+      .filter(f => GROUPS.some(g => g.qs.some(q => f.startsWith(`book/${String(q.sec).padStart(2,'0')}-`))));
+    const parts = await Promise.all(files.map(async f => EMBED ? EMBED.parts[f] : (await fetch(f, {cache:'no-cache'})).text()));
+    ENTRIES = parse(parts.join('\n\n'));
+    for (const g of GROUPS) for (const q of g.qs) { q.g = g; q.entry = find(q.sec, q.n); }
+    status.remove();
+    renderAsk(); show('ask');
+  } catch (err) {
+    status.textContent = location.protocol === 'file:'
+      ? 'Trang này phải mở qua http mới đọc được nội dung.'
+      : `Đọc nội dung thất bại: ${err.message}`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,49 +1,10 @@
-# Sống đáng đồng tiền (bản tiếng Việt)
+# How To Live Better (高性价比人生指南)
 
-Một cuốn sách tính toán cuộc sống theo kiểu "đáng đồng tiền". Mỗi lời khuyên trả lời hai câu: bạn bỏ ra gì (tiền, thời gian, sức lực, ý chí) và đổi lại được gì (sống lâu hơn, đỡ tốn tiền, đỡ tốn thời gian, giữ được tự do). Mỗi mục có mức bằng chứng A/B/C và nguồn gốc. Nguồn chỉ trích bài báo khoa học và văn bản chính thức.
+Bản dịch tiếng Việt của cuốn sách hướng dẫn sống tính theo "đáng đồng tiền". Mỗi lời khuyên cho biết bạn bỏ ra gì (tiền, thời gian, sức lực, ý chí), đổi lại được gì (sống lâu hơn, đỡ tốn tiền, đỡ tốn thời gian, giữ được tự do), mức bằng chứng A/B/C và nguồn gốc. Có 767 mục trong 34 chương.
 
-Đây là **bản dịch tiếng Việt** của 《高性价比人生指南》 (How To Live Better) do eternity4719 viết. Có 34 chương, dịch đủ.
+**[Đọc và lọc theo tiền, thời gian, ý chí, mức bằng chứng](https://khanhdoan4106.github.io/LiveBetter/)** · [Thuật ngữ](thuat-ngu.md)
 
-## Nguồn gốc và giấy phép
-
-- Bản gốc tiếng Trung: [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter), tên sách 《高性价比人生指南》, tác giả eternity4719.
-- Bản gốc phát hành theo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Bản dịch này là tác phẩm phái sinh, **đã được dịch và chỉnh sửa**, và cũng phát hành theo CC BY 4.0 (xem [LICENSE](LICENSE)).
-- Bản dịch dựa trên phiên bản gốc đến đầu tháng 11 năm 2026. Luật, mức trợ cấp và thời hạn trong sách thay đổi thường xuyên, bản gốc có thể đã cập nhật sau mốc này.
-- Dịch và chỉnh sửa bởi dkanh. Phần dịch có dùng AI hỗ trợ, đã rà soát tự động và đọc mẫu, vẫn có thể còn câu dịch gượng. Nếu thấy lỗi, bạn mở issue hoặc pull request.
-- Một số bài dài (thư mục `docs/` của bản gốc) chưa dịch. Link tới các bài đó dẫn về bản tiếng Trung trên repo gốc.
-
-## Đọc trước khi dùng
-
-- **Phần lớn luật lệ, số liệu thống kê, số điện thoại, giá cả và cơ quan nhà nước trong sách là của Trung Quốc.** Phần sức khỏe dựa trên nghiên cứu y khoa nên áp dụng được ở nhiều nơi. Phần luật, bảo hiểm, thủ tục thì ở Việt Nam phải đối chiếu với quy định tương ứng. Số khẩn cấp ở Việt Nam: công an 113, cứu hỏa 114, cấp cứu 115.
-- Giá ghi bằng **tệ (nhân dân tệ, CNY)**, là ước tính thô của tác giả để so sánh các mục với nhau.
-- Dòng **Nguồn** giữ nguyên văn bản gốc (kể cả trích dẫn tiếng Trung) để bạn tự tra và đối chiếu.
-- Dòng chú thích `<!-- 成本标签 ... -->` dưới mỗi tiêu đề là nhãn máy đọc của bản gốc, giữ nguyên.
-
-## Cách đọc một mục
-
-| Dòng | Nghĩa |
-| --- | --- |
-| Chi phí | Bỏ ra tiền, thời gian, ý chí gì |
-| Nói dễ hiểu | Diễn giải số liệu bằng lời thường. Chỉ đọc dòng này cũng đủ để ra quyết định |
-| Lợi ích | Số liệu gốc kèm khoảng tin cậy để bạn tự kiểm |
-| Mức bằng chứng | A: có số liệu định lượng từ phân tích gộp, nghiên cứu đoàn hệ lớn hoặc thử nghiệm ngẫu nhiên (RCT). B: có nghiên cứu nhưng khó định lượng, hoặc mẫu nhỏ, một nghiên cứu. C: kinh nghiệm của tác giả hoặc đồng thuận chung, không có tài liệu trực tiếp |
-| Nguồn | Tài liệu gốc (DOI, PubMed hoặc văn bản chính thức) |
-| Ghi chú | Tranh cãi, giới hạn, liên kết sang mục khác |
-
-## Thuật ngữ hay gặp
-
-| Thuật ngữ | Nghĩa |
-| --- | --- |
-| Tử vong chung (do mọi nguyên nhân) | Tỷ lệ người chết vì bất kỳ nguyên nhân nào trong một khoảng thời gian |
-| HR (tỷ số nguy cơ) | Tốc độ gặp biến cố của hai nhóm. HR 0,87 là thấp hơn nhóm đối chứng 13%, HR 1,21 là cao hơn 21% |
-| RR (nguy cơ tương đối) | Tỷ số xác suất gặp biến cố của hai nhóm, đọc như HR |
-| OR (tỷ số chênh) | Gần bằng RR khi biến cố hiếm, phóng đại khác biệt khi biến cố phổ biến |
-| 95% CI | Khoảng tin cậy 95%. Khoảng của tỷ số vắt qua 1 thì khác biệt có thể chỉ là ngẫu nhiên |
-| RCT | Thử nghiệm ngẫu nhiên có đối chứng, cho thấy quan hệ nhân quả tốt nhất |
-| Phân tích gộp (meta-analysis) | Gộp kết quả nhiều nghiên cứu để có một ước tính chung |
-| Nghiên cứu đoàn hệ | Theo dõi một nhóm người nhiều năm. Cho thấy liên quan, chưa chắc nhân quả |
-| Yếu tố gây nhiễu | Yếu tố thứ ba cùng ảnh hưởng nguyên nhân và kết quả, làm liên quan trông giống nhân quả |
-| BMI | Cân nặng (kg) chia bình phương chiều cao (m) |
+> **Lưu ý:** luật lệ, số liệu, giá cả, số điện thoại và cơ quan nhà nước trong sách phần lớn là của Trung Quốc. Phần sức khỏe dựa trên nghiên cứu y khoa nên áp dụng được ở nhiều nơi. Phần pháp luật, bảo hiểm, thủ tục thì ở Việt Nam phải đối chiếu quy định tương ứng. Giá tính bằng tệ (nhân dân tệ). Mục **Nguồn** giữ nguyên bản gốc để bạn tự tra.
 
 ## Mục lục
 
@@ -81,3 +42,10 @@ Một cuốn sách tính toán cuộc sống theo kiểu "đáng đồng tiền"
 32. [Du học](book/32-du-hoc.md)
 33. [Sống thế nào sau khi bị khuyết tật](book/33-song-the-nao-sau-khi-bi-khuyet-tat.md)
 34. [Thuốc dự phòng trong nhà, đừng uống ra chuyện](book/34-thuoc-du-phong-trong-nha-dung-uong-ra-chuyen.md)
+
+## Nguồn gốc và giấy phép
+
+- Bản gốc tiếng Trung: [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter), tên sách 《高性价比人生指南》, tác giả eternity4719.
+- Bản gốc phát hành theo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Bản dịch này là tác phẩm phái sinh, **đã dịch và chỉnh sửa**, cũng phát hành theo CC BY 4.0 ([LICENSE](LICENSE)). Giao diện trang tra cứu (`index.html`) được chuyển thể từ mã nguồn của bản gốc, phát hành theo giấy phép MIT (xem [LICENSE-CODE](LICENSE-CODE)).
+- Dịch dựa trên bản gốc đến đầu tháng 11 năm 2026. Luật, mức trợ cấp và thời hạn thay đổi thường xuyên, bản gốc có thể đã cập nhật sau mốc này.
+- Dịch và chỉnh sửa: dkanh, có dùng AI hỗ trợ. Có thể còn câu dịch gượng, bạn thấy lỗi thì mở issue hoặc pull request. Các bài dài trong `docs/` của bản gốc chưa dịch.
