@@ -112,7 +112,7 @@ Chương này chỉ tính khoản thời gian. Cái được xem là mỗi ngày
 - Nguồn: Lally P, van Jaarsveld CHM, Potts HWW, Wardle J (2010). How are habits formed: Modelling habit formation in the real world. European Journal of Social Psychology, 40(6), 998–1009. <https://doi.org/10.1002/ejsp.674>
 - Ghi chú: Chỉ có một nghiên cứu này, 96 người, làm đều là hành động đơn giản (ví dụ sau bữa ăn ăn một phần trái cây). Việc phức tạp mất bao lâu, ví dụ mỗi tuần chạy ba lần, mỗi ngày viết lách, chưa ai đo. Vì vậy hai tuần sau mà vẫn còn tốn sức không thể coi là bằng chứng thất bại. Muốn sự lặp lại thật sự xảy ra thì gắn hành động vào một bối cảnh cố định, xem mục 1 chương này (viết thành "mấy giờ, ở đâu, gặp chuyện gì thì làm gì").
 
-### 13. Trì hoãn đã ảnh hưởng đến cuộc sống thì dùng tài liệu tự học có thử nghiệm ngẫu nhiên chống lưng, không nhất thiết phải tìm nhà trị liệu
+### 13. Trì hoãn đã ảnh hưởng đến cuộc sống thì dùng tài liệu tự học có thử nghiệm ngẫu nhiên làm căn cứ, không nhất thiết phải tìm nhà trị liệu
 <!-- 成本标签: 钱=0 时间=中 毅力=些 收益=中 口径=时间 -->
 - Chi phí: Một cuốn sách tự học vài chục tệ, có cái miễn phí. Cần bỏ ra khoảng mười tuần, mỗi tuần đọc một phần, làm một bài tập.
 - Nói dễ hiểu: Trì hoãn nặng đến mức gây đau khổ thì có thể cải thiện. Luyện theo tài liệu tự học nhận thức hành vi mười tuần, có người dẫn dắt và hoàn toàn tự làm, đều tốt hơn rõ so với không làm gì. Có người dẫn và không có người dẫn không thấy khác biệt, nên tự làm theo cũng hiệu quả.

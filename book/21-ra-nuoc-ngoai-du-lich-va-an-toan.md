@@ -87,7 +87,7 @@ Chương này tính tiền và tự do thân thể, có mấy mục còn liên q
 
 ### 10. Đừng thay người lạ viết thư mời, cũng đừng để người ta mượn danh nghĩa của bạn làm thủ tục xuất nhập cảnh
 <!-- 成本标签: 钱=0 时间=少 毅力=些 收益=中 口径=自由 -->
-- Chi phí: Không tốn tiền. Khó là từ chối thẳng mặt một lần tình cảm.
+- Chi phí: Không tốn tiền. Khó là phải từ chối thẳng, không nể nang dù chỉ một lần.
 - Nói dễ hiểu: Thay người khác viết thư mời hoặc hồ sơ xin, nội dung không thật, người bị phạt là người viết ra. Cá nhân phạt 5000 tệ đến 10 nghìn tệ, có thu lợi trái pháp luật thì tịch thu luôn. Đơn vị phạt 10 nghìn đến 50 nghìn, người làm việc đó phạt thêm 5000 đến 10 nghìn. Một lần tình cảm, đổi lại là tự bạn bỏ khoản tiền này.
 - Lợi ích: Người viết thư mời, phải chịu trách nhiệm nội dung có thật hay không. Nguyên văn là: "Cá nhân thay người khác xin xuất nhập cảnh, lưu trú tạm trú mà viết thư mời giả hoặc tài liệu xin khác, do cơ quan quản lý xuất nhập cảnh phạt từ 5000 tệ trở lên đến 10 nghìn tệ trở xuống; có thu lợi trái pháp luật thì tịch thu khoản thu trái pháp luật". Đơn vị viết tài liệu giả, phạt từ 10 nghìn tệ trở lên đến 50 nghìn tệ trở xuống. Đồng thời với người phụ trách chính chịu trách nhiệm trực tiếp và người chịu trách nhiệm trực tiếp khác (lãnh đạo quản việc và người làm việc), phạt thêm từ 5000 tệ trở lên đến 10 nghìn tệ trở xuống (toàn quốc).
 - Mức bằng chứng: A
