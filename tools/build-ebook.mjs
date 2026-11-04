@@ -11,13 +11,15 @@
  * Thứ tự nội dung: trang bìa + ghi công → mục lục chương → book/01…34 → docs/*.md
  * (trừ docs/引用对照.md và docs/核实记录/).
  *
- * Cần: pandoc. Muốn ra PDF thì thêm xelatex và một font có dấu tiếng Việt + một font Hán.
+ * Cần: pandoc. Muốn ra PDF thì thêm xelatex và một font có dấu tiếng Việt.
  * Trong CI hai thứ đó do .github/workflows/book.yml cài sẵn.
+ *
+ * EPUB giữ nguyên chữ Hán (tên sách, phần Nguồn). PDF chỉ gồm tiếng Việt và tiếng Anh:
+ * bản thảo đi qua pdfify() để bỏ chữ Hán trước khi dựng.
  *
  * Biến môi trường:
  *   PANDOC         đường dẫn tới pandoc (mặc định: pandoc trong PATH)
  *   BOOK_MAINFONT  font chữ chính của PDF (mặc định tự dò: Noto Serif → Times New Roman → …)
- *   BOOK_CJKFONT   font chữ Hán của PDF (mặc định tự dò: Noto Serif CJK SC → SimSun → …)
  *   BOOK_SKIP_PDF=1  chỉ dựng EPUB (khi máy chưa có xelatex)
  */
 
@@ -50,17 +52,10 @@ const FONT_HINTS = {
     ['Liberation Serif', /^liberationserif-regular\./i],
     ['DejaVu Serif', /^dejavuserif\.ttf$/i],
   ],
-  cjk: [
-    ['Noto Serif CJK SC', /^notoserifcjksc.*\.(otf|ttc)$/i],
-    ['Noto Serif CJK', /^notoserifcjk.*\.(otf|ttc)$/i],
-    ['Noto Sans CJK SC', /^notosanscjksc.*\.(otf|ttc)$/i],
-    ['SimSun', /^simsun\.ttc$/i],
-    ['Microsoft YaHei', /^msyh\.ttc$/i],
-  ],
 };
 
 function nameOf(file) {
-  for (const [name, re] of [...FONT_HINTS.main, ...FONT_HINTS.cjk]) if (re.test(file)) return name;
+  for (const [name, re] of FONT_HINTS.main) if (re.test(file)) return name;
   return file;
 }
 
@@ -95,7 +90,7 @@ function fontSet() {
 }
 
 function pickFont(kind) {
-  const env = kind === 'main' ? 'BOOK_MAINFONT' : 'BOOK_CJKFONT';
+  const env = 'BOOK_MAINFONT';
   if (process.env[env]) return process.env[env];
 
   const hints = FONT_HINTS[kind];
@@ -173,12 +168,12 @@ function clean(text) {
 
 const parts = [];
 
-parts.push(`# Ghi công
+parts.push(`# Nguồn gốc và giấy phép
 
 **${TITLE}** — ${SUBTITLE}. Bản dịch tiếng Việt.
 
 - Nguyên tác: ${AUTHOR}. Bản gốc: <https://github.com/eternity4719/HowToLiveBetter>
-- Bản dịch tiếng Việt: dkanh, có dùng AI hỗ trợ. Trang bản dịch: <https://github.com/khanhdoan4106/HowToLiveBetter>
+- Bản dịch tiếng Việt: dkanh. Trang bản dịch: <https://github.com/khanhdoan4106/HowToLiveBetter>
 - Giấy phép: CC BY 4.0. Bản gốc phát hành theo CC BY 4.0; bản dịch là tác phẩm phái sinh, cũng phát hành theo CC BY 4.0.
 - Nội dung: 768 mục trong 34 chương, cộng 9 bài dài.
 - Dịch dựa trên bản gốc đến đầu tháng 11 năm 2026. Luật, mức trợ cấp và thời hạn thay đổi thường xuyên, bản gốc có thể đã cập nhật sau mốc này.
@@ -204,10 +199,59 @@ subtitle: "${SUBTITLE}"
 author: "${AUTHOR}"
 rights: "CC BY 4.0"
 description: "Bản dịch tiếng Việt của 《高性价比人生指南》."
+lang: vi
+toc-title: "Mục lục"
 ---
 
 ${parts.join('\n\n')}
 `;
+
+/* ---------- bản PDF: chỉ tiếng Việt và tiếng Anh ---------- */
+
+const HAN_G = /[㐀-䶿一-鿿]/gu;
+const CJK_PUNCT = {
+  '：': ': ', '，': ', ', '。': '. ', '、': ', ', '；': '; ', '！': '! ', '？': '? ',
+  '（': ' (', '）': ') ', '「': '“', '」': '”', '『': '“', '』': '”', '《': '', '》': '',
+  '〔': '[', '〕': '] ', '【': '[', '】': ']', '～': '~', '—': '—',
+};
+const CIRCLED = { '①': '(1)', '②': '(2)', '③': '(3)', '④': '(4)', '⑤': '(5)', '⑥': '(6)', '⑦': '(7)', '⑧': '(8)', '⑨': '(9)', '⑩': '(10)' };
+
+function stripHan(t) {
+  // số hiệu văn bản kiểu 法释〔2015〕17号 → "số 17/2015"
+  t = t.replace(/[一-鿿]*〔\s*(\d{4})\s*〕\s*(?:第\s*)?(\d+)\s*号/gu, 'số $2/$1');
+  // ngoặc chỉ chứa chữ Hán và dấu câu: bỏ cả ngoặc; ngoặc có chữ khác: chỉ bỏ chữ Hán
+  t = t.replace(/\s*[（(]([^()（）\n]*)[）)]/gu, (m, inner) =>
+    HAN.test(inner) && !/[A-Za-zÀ-ỹ0-9]/u.test(inner.replace(HAN_G, '')) ? '' : m);
+  t = t.replace(/[①-⑩]/g, c => CIRCLED[c]);
+  t = t.replace(/[：，。、；！？（）「」『』《》〔〕【】～]/g, c => CJK_PUNCT[c]);
+  t = t.replace(HAN_G, '');
+  return t.replace(/ {2,}/g, ' ').replace(/ ([,.;:!?)])/g, '$1').replace(/\( /g, '(');
+}
+
+function pdfify(md) {
+  let droppedSources = 0;
+  const out = md.split('\n').map(line => {
+    if (/^subtitle:/.test(line)) return null;
+    if (/^description:/.test(line)) return 'description: "Bản dịch tiếng Việt của How To Live Better."';
+    if (!line.startsWith('- Nguồn:')) return stripHan(line.replace(` — ${SUBTITLE}`, ''));
+    // Phần Nguồn: mỗi nguồn cách nhau bằng "；". Nguồn chỉ có tiếng Trung (luật, thông tư…) thì bỏ,
+    // nguồn có tiếng Anh/DOI thì giữ phần Latin.
+    const segs = line.slice('- Nguồn:'.length).split('；');
+    const kept = [];
+    let dropped = 0;
+    for (const seg of segs) {
+      const cleaned = stripHan(seg).trim();
+      const letters = (cleaned.replace(/https?:\S+/g, '').match(/[A-Za-z]/g) || []).length;
+      if (letters >= 15) kept.push(cleaned); else dropped++;
+    }
+    droppedSources += dropped;
+    let text = kept.join('; ');
+    if (!kept.length) text = 'tài liệu pháp luật và nghiên cứu tiếng Trung, xem trên bản web.';
+    else if (dropped) text += `; và ${dropped} nguồn tiếng Trung, xem trên bản web.`;
+    return `- Nguồn: ${text}`;
+  }).filter(l => l !== null).join('\n');
+  return { text: out, droppedSources };
+}
 
 const items = chapterTexts.reduce((n, c) => n + (c.text.match(/^### /gm) || []).length, 0);
 if (items !== 768) throw new Error(`đếm được ${items} mục trong book/, mong đợi 768`);
@@ -215,6 +259,13 @@ if (items !== 768) throw new Error(`đếm được ${items} mục trong book/, 
 fs.mkdirSync(BUILD, { recursive: true });
 const mdPath = path.join(BUILD, 'sach.md');
 fs.writeFileSync(mdPath, manuscript, 'utf8');
+
+const pdfDoc = pdfify(manuscript);
+const pdfMdPath = path.join(BUILD, 'sach-pdf.md');
+fs.writeFileSync(pdfMdPath, pdfDoc.text, 'utf8');
+const leftoverHan = (pdfDoc.text.match(HAN_G) || []).length;
+if (leftoverHan) throw new Error(`PDF còn ${leftoverHan} chữ Hán sau khi lọc`);
+console.log(`Bản PDF: bỏ chữ Hán, ${pdfDoc.droppedSources} nguồn tiếng Trung được thay bằng ghi chú.`);
 
 console.log(`Bản thảo: ${chapterTexts.length} chương, ${items} mục, ${docFiles.length} bài dài, ` +
   `${(manuscript.length / 1e6).toFixed(2)} triệu ký tự, bỏ ${droppedLinks} link nội bộ.`);
@@ -230,21 +281,11 @@ function pandoc(args) {
   }
 }
 
-const TEX_HEADER = String.raw`% Dấu nháy cong U+2018–U+201F là dấu câu tiếng Việt/tiếng Anh (pandoc đổi từ " và '
-% thành ’ “ ”). Mặc định xeCJK xếp chúng vào lớp CJK nên chèn khoảng trống thừa:
-% "Don’ t", "“ Lợi ích ”". Ép về lớp Default để dùng font chữ chính.
-\xeCJKDeclareCharClass{Default}{"2018 -> "201F}
-% Số khoanh tròn ①②③④ không có trong font chữ chính, chuyển sang font Hán.
-\xeCJKDeclareCharClass{CJK}{"2460 -> "24FF}
-`;
-
 pandoc([
   mdPath,
   '-o', EPUB_OUT,
   '--toc', '--toc-depth=2',
   '--split-level=1',
-  '--metadata', 'lang=vi',
-  '--metadata', 'toc-title=Mục lục',
 ]);
 console.log(`EPUB: ${EPUB_OUT} (${(fs.statSync(EPUB_OUT).size / 1e6).toFixed(1)} MB)`);
 
@@ -252,14 +293,10 @@ if (process.env.BOOK_SKIP_PDF === '1') {
   console.log('Bỏ PDF vì BOOK_SKIP_PDF=1');
 } else {
   const mainFont = pickFont('main');
-  const cjkFont = pickFont('cjk');
-  console.log(`Font PDF: ${mainFont} + ${cjkFont}`);
-
-  const headerPath = path.join(BUILD, 'dau-sach.tex');
-  fs.writeFileSync(headerPath, TEX_HEADER, 'utf8');
+  console.log(`Font PDF: ${mainFont}`);
 
   pandoc([
-    mdPath,
+    pdfMdPath,
     '-o', PDF_OUT,
     '--pdf-engine=xelatex',
     '--toc', '--toc-depth=2',
@@ -267,10 +304,7 @@ if (process.env.BOOK_SKIP_PDF === '1') {
     '-V', 'papersize=a4',
     '-V', 'geometry:margin=2.2cm',
     '-V', 'fontsize=11pt',
-    '-V', 'toc-title=Mục lục',
     '-V', `mainfont=${mainFont}`,
-    '-V', `CJKmainfont=${cjkFont}`,
-    '-H', headerPath,
   ]);
   console.log(`PDF: ${PDF_OUT} (${(fs.statSync(PDF_OUT).size / 1e6).toFixed(1)} MB)`);
 }

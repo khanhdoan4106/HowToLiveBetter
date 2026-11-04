@@ -73,4 +73,4 @@ Bản gốc còn `docs/引用对照.md` (bảng đối chiếu tham chiếu ché
 - Bản gốc tiếng Trung: [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter), tên sách 《高性价比人生指南》, tác giả eternity4719.
 - Bản gốc phát hành theo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Bản dịch này là tác phẩm phái sinh, **đã dịch và chỉnh sửa**, cũng phát hành theo CC BY 4.0 ([LICENSE](LICENSE)). Giao diện trang tra cứu (`index.html`) được chuyển thể từ mã nguồn của bản gốc, phát hành theo giấy phép MIT (xem [LICENSE-CODE](LICENSE-CODE)).
 - Dịch dựa trên bản gốc đến đầu tháng 11 năm 2026. Luật, mức trợ cấp và thời hạn thay đổi thường xuyên, bản gốc có thể đã cập nhật sau mốc này.
-- Dịch và chỉnh sửa: dkanh, có dùng AI hỗ trợ. Có thể còn câu dịch gượng, bạn thấy lỗi thì mở issue hoặc pull request. Các bài dài trong `docs/` của bản gốc đã dịch, xem mục [Bài dài](#bài-dài).
+- Dịch và chỉnh sửa: dkanh. Có thể còn câu dịch gượng, bạn thấy lỗi thì mở issue hoặc pull request. Các bài dài trong `docs/` của bản gốc đã dịch, xem mục [Bài dài](#bài-dài).
