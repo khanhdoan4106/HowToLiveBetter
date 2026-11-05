@@ -130,6 +130,17 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .group:last-of-type{border-bottom:0}
 .gt{font-size:14px;font-weight:700;color:var(--t1);line-height:24px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:baseline}
 .gt small{font-weight:400;font-size:12px;color:var(--t3)}
+/* Nhóm lọc thu gọn: bấm tiêu đề để mở; nhóm đang có lựa chọn thì tự mở và hiện số lựa chọn */
+.group.fold{padding-bottom:12px;margin-bottom:12px}
+.group.fold .gt{margin:0}
+.gt-btn{display:flex;align-items:center;gap:8px;width:100%;min-height:36px;padding:0;border:0;background:none;color:inherit;font:inherit;font-weight:700;text-align:left;cursor:pointer}
+.gt-btn .gn{flex:1;min-width:0}
+.gt-btn .gc{font-weight:600;font-size:12px;line-height:18px;min-width:20px;padding:0 6px;border-radius:999px;background:var(--brand-soft);color:var(--brand-1);text-align:center}
+.gt-btn .gc:empty{display:none}
+.gt-btn svg{flex:none;width:16px;height:16px;fill:none;stroke:var(--t3);stroke-width:2;transition:transform .2s}
+.group.fold.closed .gt-btn svg{transform:rotate(-90deg)}
+.group.fold.closed > :not(.gt){display:none}
+.group.fold .gsub{margin:2px 0 8px;font-size:12px;line-height:18px;color:var(--t3)}
 .sec-links{display:flex;flex-direction:column}
 .sec-link{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:4px 0;font-size:14px;font-weight:500;color:var(--t2);line-height:24px;text-align:left;transition:color .25s;border-radius:0}
 .sec-link:hover{color:var(--t1)}
@@ -426,10 +437,6 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
     </div>
   </div>
   <div class="group">
-    <div class="gt">Chương</div>
-    <div class="sec-links" id="f-sec" data-dim="sec"></div>
-  </div>
-  <div class="group">
     <div class="gt">Đáng đồng tiền <small>do tác giả đánh giá, chỉ so trong cùng khía cạnh</small></div>
     <div class="chips" data-dim="ratio">
       <button class="chip" data-v="极高" aria-pressed="false">Rất cao</button>
@@ -482,6 +489,10 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
     <label class="toggle"><input type="checkbox" id="f-dispute"> Chỉ xem mục có tranh cãi</label>
     <label class="toggle" hidden><input type="checkbox" id="f-todo"> Chỉ xem mục chờ xác minh</label>
     <button class="reset" id="reset">Xóa bộ lọc</button>
+  </div>
+  <div class="group">
+    <div class="gt">Chương</div>
+    <div class="sec-links" id="f-sec" data-dim="sec"></div>
   </div>
   <div class="hint">
     <p>Mỗi lần xem một chương, chi phí và mức kiểm chứng chọn được nhiều. Chọn nhiều trong cùng một nhóm là "hoặc", giữa các nhóm khác nhau là "và". Ở "Hoàn cảnh của tôi", bạn chọn những gì đúng với mình. Mục nào không gắn nhóm người thì luôn hiện.</p>
@@ -1245,6 +1256,37 @@ function writeUrl(){
   const validHash = hash && document.getElementById(hash.slice(1))?.offsetParent ? hash : '';
   history.replaceState(history.state, '', (qs ? '?'+qs : location.pathname) + validHash);
 }
+/* Biến các nhóm lọc có tiêu đề (trừ Chương) thành nhóm thu gọn được */
+const FOLD_OPEN = new Set();
+function makeFoldable(){
+  document.querySelectorAll('#sidebar .group').forEach(g => {
+    const gt = g.querySelector(':scope > .gt');
+    if (!gt || g.querySelector('#f-sec')) return;
+    const small = gt.querySelector('small');
+    const name = (small ? gt.firstChild.textContent : gt.textContent).trim();
+    const id = g.id || ('g-' + (g.querySelector('[data-dim]')?.dataset.dim || Math.random().toString(36).slice(2)));
+    g.id = id; g.classList.add('fold', 'closed');
+    const body = document.createElement('div'); body.className = 'gbody'; body.id = id + '-body';
+    while (gt.nextSibling) body.appendChild(gt.nextSibling);
+    if (small){ const p = document.createElement('p'); p.className = 'gsub'; p.textContent = small.textContent; body.prepend(p); }
+    g.appendChild(body);
+    gt.innerHTML = `<button type="button" class="gt-btn" aria-expanded="false" aria-controls="${body.id}"><span class="gn"></span><span class="gc"></span><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
+    gt.querySelector('.gn').textContent = name;
+    gt.querySelector('.gt-btn').addEventListener('click', () => setFold(g, g.classList.contains('closed')));
+  });
+}
+function setFold(g, open){
+  g.classList.toggle('closed', !open);
+  g.querySelector('.gt-btn').setAttribute('aria-expanded', String(open));
+  open ? FOLD_OPEN.add(g.id) : FOLD_OPEN.delete(g.id);
+}
+function syncFolds(){
+  document.querySelectorAll('#sidebar .group.fold').forEach(g => {
+    const n = g.querySelectorAll('[data-dim] [aria-pressed="true"]').length;
+    g.querySelector('.gc').textContent = n ? n : '';
+    if (n && !FOLD_OPEN.has(g.id)) setFold(g, true);
+  });
+}
 function syncControls(){
   document.getElementById('q').value = state.q;
   document.querySelectorAll('[data-dim] [data-v]').forEach(b => b.setAttribute('aria-pressed', String(state[b.parentElement.dataset.dim].has(b.dataset.v))));
@@ -1252,6 +1294,7 @@ function syncControls(){
   if (allBtn) allBtn.setAttribute('aria-pressed', String(state.sec.size === 0));
   document.getElementById('f-dispute').checked = state.dispute;
   document.getElementById('f-todo').checked = state.todo;
+  syncFolds();
 }
 // 文字只在搜索词变化时重渲染；筛选按钮只切换显隐，不碰卡片内容
 function renderCard(card, terms, key){
@@ -1708,7 +1751,7 @@ document.addEventListener('keydown', ev => {
     PERF.log('parse', t1, files.length + ' files');
     status.remove();
     const t2 = performance.now(); build(sections); PERF.log('建 DOM', t2, CARDS.length + ' 张卡');
-    buildGlossary(); buildUpdLine(); countMarks(); readUrl(); wire(); apply();
+    buildGlossary(); buildUpdLine(); countMarks(); makeFoldable(); readUrl(); wire(); apply();
     PERF.mark(`DOM 节点 ${document.getElementsByTagName('*').length}，术语 ${GLOSS.length}`);
     if (location.hash){
       let target = document.getElementById(location.hash.slice(1));
