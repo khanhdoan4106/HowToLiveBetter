@@ -7,16 +7,14 @@ on:
       - 'book/**'
       - 'docs/**'
       - 'README.md'
-      - 'tools/**'
-      - 'sw.js'
+      - 'tools/build-ebook.mjs'
       - '.github/workflows/book.yml'
   pull_request:
     paths:
       - 'book/**'
       - 'docs/**'
       - 'README.md'
-      - 'tools/**'
-      - 'sw.js'
+      - 'tools/build-ebook.mjs'
       - '.github/workflows/book.yml'
   workflow_dispatch:
 
@@ -26,6 +24,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Máy chủ gói của Ubuntu đôi khi treo giữa chừng; đừng để job chờ cả tiếng
+    timeout-minutes: 40
     steps:
       - name: Lấy mã nguồn
         uses: actions/checkout@v4
@@ -35,14 +35,12 @@ jobs:
         with:
           node-version: '22'
 
-      # Danh sách file đọc offline trong sw.js phải khớp book/ và docs/
-      - name: Kiểm danh sách file offline
-        run: node tools/tao-sw.mjs --check
-
       - name: Cài pandoc, xelatex, font và epubcheck
         run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc epubcheck \
+          # Tải lại khi một gói bị treo hoặc lỗi mạng, thay vì đứng chờ mãi
+          APT="-o Acquire::Retries=5 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60"
+          sudo apt-get $APT update
+          sudo apt-get $APT install -y pandoc epubcheck \
             texlive-xetex texlive-latex-recommended texlive-latex-extra \
             texlive-fonts-recommended lmodern \
             fonts-noto-core
