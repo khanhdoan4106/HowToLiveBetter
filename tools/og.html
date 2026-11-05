@@ -1,0 +1,62 @@
+<!doctype html>
+<!--
+  Nguồn của ảnh chia sẻ og.png (1200×630).
+  Sửa chữ ở đây rồi chạy lại: node tools/tao-og.mjs
+  Không mở trực tiếp file này để chụp bằng tay, kích thước sẽ lệch.
+-->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>og</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    --brand:#3451b2;
+    background:
+      radial-gradient(900px 620px at 88% -12%, #5c73e7 0%, rgba(92,115,231,0) 62%),
+      radial-gradient(780px 560px at -8% 108%, #243a86 0%, rgba(36,58,134,0) 60%),
+      var(--brand);
+    color:#fff;
+    font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{position:relative;width:100%;height:100%;padding:76px 72px;display:flex;flex-direction:column}
+  .ring{position:absolute;border:2px solid rgba(255,255,255,.16);border-radius:50%;pointer-events:none}
+  .ring.a{width:560px;height:560px;right:-170px;top:-190px}
+  .ring.b{width:360px;height:360px;right:-60px;top:-90px;border-color:rgba(255,255,255,.1)}
+  .check{position:absolute;right:58px;bottom:26px;width:330px;height:330px;opacity:.12}
+  .check path{fill:none;stroke:#fff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+  .kicker{display:flex;align-items:center;gap:14px;font-size:22px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+  .kicker i{display:block;width:44px;height:3px;background:rgba(255,255,255,.55);border-radius:2px}
+  h1{margin-top:34px;font-size:104px;line-height:.98;font-weight:700;letter-spacing:-.035em}
+  h1 span{display:block}
+  .sub{margin-top:30px;font-size:36px;line-height:1.25;font-weight:500;color:rgba(255,255,255,.94);max-width:820px}
+  .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:32px;padding-top:30px;border-top:1px solid rgba(255,255,255,.26)}
+  .stats{font-size:23px;line-height:1.4;font-weight:500;color:rgba(255,255,255,.92);white-space:nowrap}
+  .stats b{font-weight:400;opacity:.55;padding:0 8px}
+  .url{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:500;color:rgba(255,255,255,.86);letter-spacing:.01em;white-space:nowrap}
+  .url svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="ring a"></span><span class="ring b"></span>
+    <svg class="check" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 52l20 21 38-46"/></svg>
+
+    <p class="kicker"><i></i>Sách dịch tiếng Việt</p>
+
+    <h1><span>How To</span><span>Live Better</span></h1>
+
+    <p class="sub">Hướng dẫn sống tính theo đáng đồng tiền</p>
+
+    <div class="foot">
+      <p class="stats">772 lời khuyên<b>·</b>34 chương<b>·</b>có nguồn kiểm chứng</p>
+      <p class="url">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+        khanhdoan4106.github.io/HowToLiveBetter
+      </p>
+    </div>
+  </div>
+</body>
+</html>
