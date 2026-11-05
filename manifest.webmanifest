@@ -1,0 +1,17 @@
+{
+  "name": "How To Live Better",
+  "short_name": "Live Better",
+  "description": "Bản dịch tiếng Việt của 高性价比人生指南: 772 lời khuyên có ghi chi phí, lợi ích và nguồn kiểm chứng.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3451b2",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

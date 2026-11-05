@@ -8,6 +8,7 @@ on:
       - 'docs/**'
       - 'README.md'
       - 'tools/**'
+      - 'sw.js'
       - '.github/workflows/book.yml'
   pull_request:
     paths:
@@ -15,6 +16,7 @@ on:
       - 'docs/**'
       - 'README.md'
       - 'tools/**'
+      - 'sw.js'
       - '.github/workflows/book.yml'
   workflow_dispatch:
 
@@ -32,6 +34,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      # Danh sách file đọc offline trong sw.js phải khớp book/ và docs/
+      - name: Kiểm danh sách file offline
+        run: node tools/tao-sw.mjs --check
 
       - name: Cài pandoc, xelatex, font và epubcheck
         run: |

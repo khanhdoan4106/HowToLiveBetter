@@ -12,6 +12,9 @@
 <meta property="og:image:alt" content="How To Live Better: 772 lời khuyên, 34 chương, có nguồn kiểm chứng">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://khanhdoan4106.github.io/HowToLiveBetter/og.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#3451b2">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233451b2'/%3E%3Cpath d='M17 33l10 11 20-24' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <script>(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})();</script>
 <style>
@@ -527,6 +530,12 @@ document.getElementById('reset').addEventListener('click', () => { ans = {}; sav
       : `Đọc nội dung thất bại: ${err.message}`;
   }
 })();
+</script>
+<script>
+/* Đọc offline: đăng ký service worker (sw.js do tools/tao-sw.mjs sinh). Bỏ qua khi mở bằng file:// */
+if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+  addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
 </script>
 </body>
 </html>
