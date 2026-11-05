@@ -1,0 +1,43 @@
+name: Kiểm tra nhanh
+
+# Các kiểm tra nhẹ, chạy trong vài chục giây, không cần cài TeX như workflow Sách điện tử.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Kiểm tra nhanh
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v4
+
+      - name: Cài Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Đủ số mục trong book/
+        run: |
+          n=$(grep -h '^### ' book/*.md | wc -l)
+          echo "Có $n mục"
+          [ "$n" -gt 0 ]
+
+      # Danh sách file đọc offline trong sw.js phải khớp book/ và docs/
+      - name: Danh sách file offline (sw.js)
+        run: node tools/tao-sw.mjs --check
+
+      - name: Cú pháp các script
+        run: |
+          node --check sw.js
+          for f in tools/*.mjs; do node --check "$f"; done
+
+      - name: manifest.webmanifest hợp lệ
+        run: node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest','utf8'))"
