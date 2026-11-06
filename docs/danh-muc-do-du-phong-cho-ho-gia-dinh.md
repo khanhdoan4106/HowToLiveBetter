@@ -6,7 +6,7 @@ Bản dịch tiếng Việt của bài gốc `docs/家庭应急装备清单.md` 
 
 Tương ứng mục 26 chương 1 của sách (chuẩn bị đủ bình chữa cháy, chăn chữa cháy, mặt nạ thoát hiểm và túi sơ cứu). Danh sách này liệt kê những thứ nên có sẵn trong nhà; ngoài chăn chữa cháy, không nói cách dùng. Thoát khỏi đám cháy, hồi sức tim phổi, chảy máu nhiều, bỏng, ngộ độc khí CO phải làm gì tại chỗ đều viết ở chương 13. Đầu báo khói và đầu báo khí CO chọn và lắp thế nào, xem mục 3 chương 1. Ống mềm dẫn gas và bếp gas xem mục 4 chương 1.
 
-Chương này tính món lợi ít người chết, ít bị thương, chỉ tính thương tích do tai nạn gây ra, không tính bệnh tật. Bản thân việc mua đồ dùng có ích đến đâu thì bằng chứng không vững, lý do viết ở mục cuối; trước khi đọc tiếp hãy xem đoạn đó.
+Chương này tính món lợi ít người chết, ít bị thương, chỉ tính thương tích do tai nạn gây ra, không tính bệnh tật. Riêng việc mua đồ dùng có ích đến đâu thì bằng chứng không vững, lý do viết ở mục cuối; trước khi đọc tiếp hãy xem đoạn đó.
 
 ## Một, nguyên văn danh mục chính thức
 
