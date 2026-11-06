@@ -34,7 +34,7 @@ Trong nếp sinh hoạt bình thường, hai thứ này đồng bộ với nhau.
 
 ## Bốn, vấn đề của ca đêm không phải là "thức", mà là hai chiếc đồng hồ bị tách khỏi nhau
 
-Người làm ca đêm ban ngày vẫn gặp ánh sáng, vẫn sống đời sống xã hội ban ngày. Nên đồng hồ chính về cơ bản vẫn bám theo chu kỳ ngày đêm của bên ngoài.
+Người làm ca đêm ban ngày vẫn gặp ánh sáng, vẫn sống đời sống xã hội ban ngày. Vì vậy đồng hồ chính về cơ bản vẫn bám theo chu kỳ ngày đêm của bên ngoài.
 
 Nhưng bạn ăn, làm việc, huy động chuyển hóa vào lúc đêm theo nghĩa sinh học. Đồng hồ ngoại vi bị kéo về phía bên kia.
 
