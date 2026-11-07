@@ -2,6 +2,8 @@
 
 # 4. Don't Waste Time (Đừng lãng phí thời gian)
 
+**Người đọc ở Việt Nam lưu ý:** số 12356 trong chương là đường dây hỗ trợ tâm lý của Trung Quốc, không gọi được từ Việt Nam. Cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Chương này chỉ tính khoản thời gian. Cái được xem là mỗi ngày, mỗi tuần, mỗi năm lấy lại được bao nhiêu giờ, hoặc tỷ lệ làm xong một việc đúng hạn tăng được bao nhiêu. Ở đây không quy đổi thời gian ra tuổi thọ, cũng không quy đổi ra tiền. Chỗ nào có liên quan đến tiền thì chỉ đưa cách tính, không đưa kết luận. Bằng chứng của đa số mục trong chương là một nghiên cứu đơn lẻ, hoặc thống kê tổng lượng từ khảo sát sử dụng thời gian, nên mức chủ yếu là B và C.
 
 ### 1. Biến "định làm" thành "mấy giờ, ở đâu, gặp chuyện gì thì làm gì"

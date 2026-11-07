@@ -2,6 +2,8 @@
 
 # 19. On the Job, Leaving and Work Injury (Đang làm, nghỉ việc và tai nạn lao động)
 
+**Người đọc ở Việt Nam lưu ý:** số 120 và 12356 trong chương là số cấp cứu và đường dây hỗ trợ tâm lý của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Chương này tính tiền: tiền tính thế nào, giấy ký thế nào, thời hạn tính thế nào. Ba mục đầu nói khoản tiền bạn nên nhận được ngay khi còn đang làm, năm mục giữa nói chuyện nghỉ việc, bảy mục tiếp nói bệnh nghề nghiệp và tai nạn lao động. Tiền tai nạn lao động lớn hơn tiền bị cho nghỉ việc một bậc, thời hạn cũng cứng hơn. Tổn thất do bệnh nghề nghiệp gây ra căn bản không đổi lại được. Cuối chương còn mười mục. Bốn mục đầu trong đó nói bị bắt nạt ở đơn vị thì làm sao, giấy xác nhận nghỉ việc đòi thế nào, thuế thu nhập cá nhân của trợ cấp nghỉ việc tính thế nào, đổi thành phố làm việc thì quan hệ bảo hiểm xã hội chuyển thế nào. Ba mục giữa nói lương gấp đôi khi không ký hợp đồng, đơn vị không đóng bảo hiểm xã hội, nghỉ việc bị đòi tiền vi phạm hợp đồng. Ba mục cuối nói đơn vị muốn đổi vị trí giảm lương thì tỏ thái độ thế nào, lương và bồi thường của lao động phái cử tìm ai, đã ký hợp đồng lao động trắng thì cứu thế nào.
 
 Các mục của chương này chia theo chủ đề thành mấy khối dưới đây, trong ngoặc là số mục.

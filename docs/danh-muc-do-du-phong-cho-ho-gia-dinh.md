@@ -2,6 +2,8 @@
 
 # Danh mục đồ dự phòng cho hộ gia đình: mua gì, để đâu, bao lâu kiểm tra một lần
 
+**Người đọc ở Việt Nam lưu ý:** số 120 trong bài là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu.
+
 Bản dịch tiếng Việt của bài gốc `docs/家庭应急装备清单.md` trong 《高性价比人生指南》 của eternity4719, giấy phép CC BY 4.0.
 
 Tương ứng mục 26 chương 1 của sách (chuẩn bị đủ bình chữa cháy, chăn chữa cháy, mặt nạ thoát hiểm và túi sơ cứu). Danh sách này liệt kê những thứ nên có sẵn trong nhà; ngoài chăn chữa cháy, không nói cách dùng. Thoát khỏi đám cháy, hồi sức tim phổi, chảy máu nhiều, bỏng, ngộ độc khí CO phải làm gì tại chỗ đều viết ở chương 13. Đầu báo khói và đầu báo khí CO chọn và lắp thế nào, xem mục 3 chương 1. Ống mềm dẫn gas và bếp gas xem mục 4 chương 1.

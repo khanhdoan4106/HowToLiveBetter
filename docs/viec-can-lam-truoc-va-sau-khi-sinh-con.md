@@ -2,6 +2,8 @@
 
 # Việc phải làm trước và sau khi sinh con: danh sách xếp theo thời gian
 
+**Người đọc ở Việt Nam lưu ý:** số 120 trong bài là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu.
+
 Bản dịch tiếng Việt của bài gốc `docs/孩子出生前后要办的事.md` trong 《高性价比人生指南》 của eternity4719, giấy phép CC BY 4.0.
 
 Sách chia nội dung theo chủ đề, nên chuyện mang thai, sinh nở và nuôi con nằm rải rác ở vài chương. Danh sách này xếp chúng theo thời gian, từ lúc chuẩn bị có thai đến khi con tròn một tuổi. Mỗi mục chỉ ghi phải làm gì; vì sao làm và bằng chứng vững đến đâu thì xem mục trong ngoặc ở cuối. Bạn đang ở giai đoạn nào thì đọc từ tiêu đề nhỏ đó trở xuống.

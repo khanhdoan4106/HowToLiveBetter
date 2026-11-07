@@ -2,6 +2,8 @@
 
 # 33. Living After Disability (Sống thế nào sau khi bị khuyết tật)
 
+**Người đọc ở Việt Nam lưu ý:** số 120 và 12356 trong chương là số cấp cứu và đường dây hỗ trợ tâm lý của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Chương này viết về những ngày sau khi khuyết tật đã xảy ra. Phòng ngừa khuyết tật thế nào, ở chương 1 và chương 13, ở đây không nhắc lại.
 
 Bốn cách tính tách riêng, không quy đổi lẫn nhau. Mấy mục cấp cứu và biến chứng tính theo tỷ lệ tử vong. Mấy mục trợ cấp, chế độ, kiện tụng tính theo tiền. Mấy mục đi học, làm thủ tục tính theo thời gian. Mấy mục người rối loạn tâm thần nhập viện, năng lực hành vi và giám hộ tính theo tự do thân thể.

@@ -2,6 +2,8 @@
 
 # 17. When There Are Elderly at Home (Nhà có người già)
 
+**Người đọc ở Việt Nam lưu ý:** số 110 trong chương là số công an của Trung Quốc. Ở Việt Nam, báo công an thì gọi 113.
+
 Cách tính: tiền và tự do thân thể. Nhà có người già, phần lớn rắc rối không phải thiếu tiền, mà là chưa nói rõ với nhau từ trước, chưa ký giấy cho đàng hoàng. Loét do nằm lâu, mổ đục thủy tinh thể, người già dắt chó đi dạo ngã gãy xương, trí nhớ kém đi bệnh viện khám, bốn mục này tính theo tỷ lệ tử vong, không so với các mục khác của chương.
 
 ### 1. Tranh lúc người già còn tỉnh táo, chỉ định người giám hộ tương lai bằng văn bản

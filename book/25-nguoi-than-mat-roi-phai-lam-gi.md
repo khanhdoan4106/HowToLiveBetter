@@ -2,6 +2,8 @@
 
 # 25. What to Do After Someone Dies (Người thân mất rồi phải làm những gì)
 
+**Người đọc ở Việt Nam lưu ý:** số 110 trong chương là số công an của Trung Quốc. Ở Việt Nam, báo công an thì gọi 113.
+
 Cách tính: tiền. Chương này chỉ nói thủ tục làm thế nào, tiền lấy thế nào, gồm lúc người vừa mất thì làm gì trước, khoản phí nào có bảng kê để đối chiếu. Còn có tiền trong tài khoản nào lấy lại được, việc nào người thân có quyền đứng ra làm. Năm mục đầu xếp theo thứ tự việc xảy ra, lần lượt là hiện trường, giấy chứng tử, thi thể và hỏa táng, có ý kiến khác về nguyên nhân chết thì làm sao, xóa hộ khẩu. Những sắp xếp người già nên làm lúc còn sống, như giám hộ theo ý định, di chúc, tài khoản, xem chương 17. Ba khoản chế độ chết do tai nạn lao động xem chương 19.
 
 Phần tang lễ này dựa vào "Điều lệ Quản lý Tang lễ" bản mới, thi hành từ ngày 30 tháng 3 năm 2026. Trợ cấp tang lễ và trợ cấp tuất của bảo hiểm dưỡng lão tính thế nào, xem mục 9 (số dư quỹ công tích, chế độ bảo hiểm xã hội).

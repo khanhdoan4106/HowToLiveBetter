@@ -2,6 +2,8 @@
 
 # 6. The Reverse List: Things That Seem Worth It but Aren't (Danh sách ngược: những thứ tưởng đáng mà không đáng)
 
+**Người đọc ở Việt Nam lưu ý:** số 120 trong chương là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu.
+
 Chương này thu những thứ "trông vừa rẻ vừa hiệu quả". Lật đến nghiên cứu gốc thì lợi ích của chúng gần bằng không, bằng không, có thứ còn âm.
 
 Các mục trong chương chia thành các nhóm chủ đề dưới đây, trong ngoặc là số mục.

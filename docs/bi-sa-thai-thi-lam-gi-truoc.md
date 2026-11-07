@@ -2,6 +2,8 @@
 
 # Bị cho nghỉ việc rồi thì làm gì trước
 
+**Người đọc ở Việt Nam lưu ý:** số 12356 trong bài là đường dây hỗ trợ tâm lý của Trung Quốc, không gọi được từ Việt Nam. Cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Bản dịch tiếng Việt của bài gốc `docs/被裁了之后先做什么.md` trong 《高性价比人生指南》 của eternity4719, giấy phép CC BY 4.0.
 
 Những việc phải làm sau khi bị cắt giảm nhân sự, bị cho nghỉ việc nằm rải ở chương 19, chương 7 và vài chương khác. Dưới đây xếp thành một danh sách theo thời gian. Mỗi bước chỉ ghi làm gì; chi tiết, con số và căn cứ đều ở mục được chỉ trước dấu ngoặc. Ai chỉ bị nợ lương, chưa rời đi thì xem thẳng mục 2 chương 7 (bị nợ lương thì khiếu nại thanh tra lao động trước).
