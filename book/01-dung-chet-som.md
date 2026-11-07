@@ -2,7 +2,7 @@
 
 # 1. Don't Die Early (Đừng chết sớm)
 
-**Người đọc ở Việt Nam lưu ý:** các số 120, 110, 119 và 12356 trong chương là của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu hoặc báo công an, 114 khi có cháy, 112 khi cần cứu nạn cứu hộ, 111 khi trẻ em bị xâm hại. Từ 1/11/2026, yêu cầu cấp cứu y tế gọi 113; 115 vẫn gọi được ở nhiều nơi trong giai đoạn chuyển tiếp; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+**Người đọc ở Việt Nam lưu ý:** các số 120, 110, 119 và 12356 trong chương là của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu hoặc báo công an, 114 khi có cháy, 112 khi cần cứu nạn cứu hộ, 111 khi trẻ em bị xâm hại. Từ 1/11/2026, cấp cứu y tế cũng gọi 113. Cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
 
 Chương này nói về ba việc. Thứ nhất là các ca chết do tai nạn và thương tích như tai nạn giao thông, hỏa hoạn, ngộ độc. Thứ hai là một số ít vắc-xin và xét nghiệm sàng lọc có bằng chứng chắc chắn nhất. Thứ ba là những dấu hiệu cơ thể mà hễ thấy thì nên đi khám. Số liệu ở cột "Lợi ích" lấy từ thử nghiệm phân nhóm ngẫu nhiên, nghiên cứu theo dõi một nhóm lớn người trong nhiều năm, hoặc thống kê chính thức. Cột "Chi phí" là ước tính thô của tác giả theo giá thị trường (Trung Quốc), chỉ để so sánh các mục với nhau, đừng đem đi trích dẫn.
 

@@ -178,7 +178,7 @@ parts.push(`# Nguồn gốc và giấy phép
 - Nội dung: 772 mục trong 34 chương, cộng 9 bài dài.
 - Dịch dựa trên bản gốc đến đầu tháng 11 năm 2026. Luật, mức trợ cấp và thời hạn thay đổi thường xuyên, bản gốc có thể đã cập nhật sau mốc này.
 - Lưu ý: luật lệ, số liệu, giá cả, số điện thoại và cơ quan nhà nước trong sách phần lớn là của Trung Quốc. Phần sức khỏe dựa trên nghiên cứu y khoa nên áp dụng được ở nhiều nơi. Phần pháp luật, bảo hiểm, thủ tục thì ở Việt Nam phải đối chiếu quy định tương ứng. Giá tính bằng tệ (nhân dân tệ).
-- Số khẩn cấp ở Việt Nam: gọi 113 khi cần cấp cứu hoặc báo công an, 114 khi có cháy, 112 khi cần cứu nạn cứu hộ. Từ 1/11/2026, yêu cầu cấp cứu y tế gọi 113; 115 vẫn gọi được ở nhiều nơi trong giai đoạn chuyển tiếp.
+- Số khẩn cấp ở Việt Nam: gọi 113 khi cần cấp cứu hoặc báo công an, 114 khi có cháy, 112 khi cần cứu nạn cứu hộ. Từ 1/11/2026, cấp cứu y tế cũng gọi 113.
 - Đọc trên web: <https://khanhdoan4106.github.io/HowToLiveBetter/>`);
 
 parts.push('# Mục lục chương\n\n' + chapterToc.map(c => `${c.num}. ${c.title}`).join('\n'));

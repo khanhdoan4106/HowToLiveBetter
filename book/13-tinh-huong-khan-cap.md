@@ -2,7 +2,7 @@
 
 # 13. Emergencies: What to Do First (Tình huống khẩn cấp: làm gì trước)
 
-**Người đọc ở Việt Nam lưu ý:** các số 120 và 110 trong chương là của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu hoặc báo công an, 114 khi có cháy, 112 khi cần cứu nạn cứu hộ, 111 khi trẻ em bị xâm hại. Từ 1/11/2026, yêu cầu cấp cứu y tế gọi 113; 115 vẫn gọi được ở nhiều nơi trong giai đoạn chuyển tiếp; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+**Người đọc ở Việt Nam lưu ý:** các số 120 và 110 trong chương là của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu hoặc báo công an, 114 khi có cháy, 112 khi cần cứu nạn cứu hộ, 111 khi trẻ em bị xâm hại. Từ 1/11/2026, cấp cứu y tế cũng gọi 113. Cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
 
 Chương này nói xảy ra chuyện thì làm gì trước, làm gì sau, không được làm gì. Các mục cấp cứu và hoang dã tính theo tỷ lệ tử vong do nguyên nhân cụ thể và tỷ lệ sống sót. Các mục về đe dọa và lừa đảo tính theo tiền và tự do thân thể. Hai loại con số không quy đổi qua lại. Mấy mục này trước hết để cho chính bạn và vợ hoặc chồng, người thân trực hệ dùng. Ngừng tim có 79,2% xảy ra ở nhà, người bạn có khả năng cứu nhất chính là người trong nhà. Với bạn bè đồng nghiệp thì thứ hai. Với người lạ cũng không phải hoàn toàn vô ích, nhưng mức này thấp nhất, còn có thể bị vu, bị cuốn vào vụ án. Vì vậy loại mục này viết động tác bảo vệ mình và điều khoản miễn trách lên trước.
 

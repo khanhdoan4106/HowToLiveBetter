@@ -2,7 +2,7 @@
 
 # Danh mục đồ dự phòng cho hộ gia đình: mua gì, để đâu, bao lâu kiểm tra một lần
 
-**Người đọc ở Việt Nam lưu ý:** số 120 trong bài là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu; 115 vẫn gọi được ở nhiều nơi trong giai đoạn chuyển tiếp.
+**Người đọc ở Việt Nam lưu ý:** số 120 trong bài là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu.
 
 Bản dịch tiếng Việt của bài gốc `docs/家庭应急装备清单.md` trong 《高性价比人生指南》 của eternity4719, giấy phép CC BY 4.0.
 

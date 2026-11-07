@@ -2,7 +2,7 @@
 
 # 27. Pregnancy and Childbirth: From Discovery to Discharge Paperwork (Mang thai và sinh nở: từ lúc phát hiện có thai đến lúc xuất viện làm giấy tờ)
 
-**Người đọc ở Việt Nam lưu ý:** số 120 trong chương là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu; 115 vẫn gọi được ở nhiều nơi trong giai đoạn chuyển tiếp.
+**Người đọc ở Việt Nam lưu ý:** số 120 trong chương là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu.
 
 Nửa đầu chương này tính rủi ro tử vong của thai phụ và thai nhi. Nửa sau tính tiền và thời gian chạy việc. Hai loại sổ không quy đổi lẫn nhau. Nội dung chỉ nói "lúc nào làm việc gì". Dinh dưỡng thai kỳ, thai giáo mấy việc không có bằng chứng cứng, hoặc tác dụng rất nhỏ, ở đây không viết. Trợ cấp sinh sản, nghỉ thai sản và sổ tiền nuôi con xem chương 18, sinh xong nuôi con thế nào xem chương 20, cấp cứu xem chương 13.
 
