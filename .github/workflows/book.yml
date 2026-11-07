@@ -35,17 +35,27 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Cài pandoc, xelatex, font và epubcheck
+      # Tải lại khi một gói bị treo hoặc lỗi mạng, thay vì đứng chờ mãi
+      - name: Cài pandoc và epubcheck
         run: |
-          # Tải lại khi một gói bị treo hoặc lỗi mạng, thay vì đứng chờ mãi
           APT="-o Acquire::Retries=5 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60"
           sudo apt-get $APT update
-          sudo apt-get $APT install -y pandoc epubcheck \
+          sudo apt-get $APT install -y pandoc epubcheck
+
+      # TeX nặng khoảng 350 MB, mất 10–15 phút cài. Trên PR chỉ dựng và kiểm EPUB
+      # (vẫn chạy bước lọc chữ Hán của bản PDF), PDF chỉ dựng khi vào main để đăng Release.
+      - name: Cài xelatex và font để dựng PDF
+        if: github.event_name != 'pull_request'
+        run: |
+          APT="-o Acquire::Retries=5 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60"
+          sudo apt-get $APT install -y \
             texlive-xetex texlive-latex-recommended texlive-latex-extra \
             texlive-fonts-recommended lmodern \
             fonts-noto-core
 
       - name: Dựng EPUB và PDF
+        env:
+          BOOK_SKIP_PDF: ${{ github.event_name == 'pull_request' && '1' || '' }}
         run: node tools/build-ebook.mjs
 
       # EPUB hỏng thì job đỏ, nhưng không chặn bước đăng PDF bên dưới
