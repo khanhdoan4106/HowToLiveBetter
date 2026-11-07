@@ -2,6 +2,8 @@
 
 # 14. Accounts and Information Security (Tài khoản và an toàn thông tin)
 
+**Người đọc ở Việt Nam lưu ý:** số 110 trong chương là số công an của Trung Quốc. Ở Việt Nam, báo công an thì gọi 113.
+
 Cách tính: tiền và thông tin cá nhân. Tài khoản bị người khác đăng nhập, mất trước hết là tiền. Đối phương còn dùng tài khoản của bạn đi lừa người trong danh bạ của bạn. Thân phận của bạn cũng coi như bị người ta lấy đi.
 
 ### 1. Email, thanh toán, mạng xã hội đều bật xác minh hai lớp, ưu tiên xác nhận bằng thông báo trên điện thoại, sau đó mới đến mã xác minh tin nhắn

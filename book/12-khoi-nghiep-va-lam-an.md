@@ -2,6 +2,8 @@
 
 # 12. Starting a Business: Don't Lose Your Savings (Khởi nghiệp và làm ăn)
 
+**Người đọc ở Việt Nam lưu ý:** số 110 trong chương là số công an của Trung Quốc. Ở Việt Nam, báo công an thì gọi 113.
+
 Chương này chỉ tính tiền và trách nhiệm pháp lý, không quy đổi thành tuổi thọ. Mở một cửa hàng, lập một công ty, bước nào sẽ làm tiền của chính bạn, tiền của gia đình, tiền của vợ hoặc chồng cùng bay mất? Pháp luật quy định thế nào, có tách ra trước được không? Chỗ nào chỉ viết theo kinh nghiệm, không có tài liệu chống đỡ, thì ghi mức C.
 
 Các mục trong chương chia theo chủ đề thành mấy nhóm dưới đây, trong ngoặc là số mục.

@@ -2,6 +2,8 @@
 
 # 8. Don't Get Yourself Into Trouble: Law and Asset Safety (Đừng tự đưa mình vào rắc rối: pháp luật và an toàn tài sản)
 
+**Người đọc ở Việt Nam lưu ý:** số 110 và 12356 trong chương là số công an và đường dây hỗ trợ tâm lý của Trung Quốc. Ở Việt Nam, báo công an thì gọi 113; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Chương này tính tiền và tự do thân thể, không quy đổi ra tuổi thọ. Nói về ba việc: pháp luật quy định bạn phải chịu trách nhiệm gì, làm theo thì bớt phải đền bao nhiêu tiền, khi xảy ra chuyện thì trong thủ tục bạn có những quyền gì. Số điều khoản đều đã đối chiếu với nguyên văn chính thức.
 
 Các mục trong chương chia thành các nhóm chủ đề dưới đây, trong ngoặc là số mục.

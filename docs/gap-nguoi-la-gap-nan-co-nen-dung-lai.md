@@ -2,6 +2,8 @@
 
 # Trên đường gặp người lạ gặp nạn, đi tiếp hay dừng lại
 
+**Người đọc ở Việt Nam lưu ý:** số 120, 110 và 12356 trong bài là của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu hoặc báo công an; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Bản dịch tiếng Việt của bài gốc `docs/遇到陌生人出事该不该停.md` trong 《高性价比人生指南》 của eternity4719, giấy phép CC BY 4.0.
 
 Đây là bản dài của mục 2 chương 13 (người già ngã, có người nằm xuống thì đừng vội đỡ). Cả sách chia người được hưởng lợi thành bốn bậc, xếp theo khả năng mối lợi đó quay lại với bạn sau này. Người lạ là bậc thấp nhất. Khả năng họ đền đáp bạn rất nhỏ, mà bạn cũng không biết họ là người thế nào. Vì vậy ở đây không khuyên bạn nên làm gì, chỉ liệt kê đủ cái giá phải trả của ba con đường, chọn đường nào là do bạn.

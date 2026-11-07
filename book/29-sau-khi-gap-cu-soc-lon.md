@@ -2,6 +2,8 @@
 
 # 29. After a Major Blow (Sau khi gặp cú sốc lớn)
 
+**Người đọc ở Việt Nam lưu ý:** số 120 và 12356 trong chương là số cấp cứu và đường dây hỗ trợ tâm lý của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Người thân qua đời, được thông báo bệnh nặng, mất việc, ly hôn. Mấy việc này trong nghiên cứu có một điểm chung: xảy ra chuyện không chỉ là tâm trạng, mà còn là cơ thể. Đoạn nguy cơ cao nhất tập trung từ mấy tuần đầu đến năm đầu. Chương này không nói "bước ra" thế nào, chỉ nói trong khoảng thời gian này việc nào phải có người canh chừng, quyết định nào phải đẩy về sau, lúc nào nên đi khám. Phần lớn các mục tính xác suất tử vong. Bốn mục nói tiền và chế độ thì tính tiền. Bốn mục đó là đừng vừa vào đã bỏ tiền làm tư vấn đau buồn (mục 9), gọi 12356 và lấy số phòng khám tâm lý (mục 11), quyết định lớn không thể đảo ngược thì đẩy về sau (mục 12), đừng lấy cái chết làm cách trả nợ (mục 13). Hai loại con số không quy đổi lẫn nhau. Không có người thân cũng không có bạn để tìm, câu "tìm một người canh chừng" làm thế nào cho cụ thể xem mục 6. Bản thân từng gặp tai nạn xe, bị đánh, sau thiên tai cứ gặp ác mộng, hồi tưởng lại, xem mục 14 (trị liệu tâm lý tập trung vào sang chấn).
 
 Thủ tục lúc người thân qua đời, thi thể và tiền cần lấy xem chương 25. Giám hộ và di chúc của người già lúc còn sống xem chương 17. Mất việc được lĩnh gì xem chương 7. Vận động và chiếu sáng khi tâm trạng xuống thấp xem chương 3 và chương 22. Có ý nghĩ tự tử thì gọi 12356 trước, xem mục 25 chương 1, thang thời gian của ý nghĩ xem mục 32 chương 1. Di chứng sau khi được cứu xem mục 33 chương 1. Mấy mục này chương này không nhắc lại.

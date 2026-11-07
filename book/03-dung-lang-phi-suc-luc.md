@@ -2,6 +2,8 @@
 
 # 3. Don't Waste Energy (Đừng lãng phí sức lực)
 
+**Người đọc ở Việt Nam lưu ý:** số 12356 trong chương là đường dây hỗ trợ tâm lý của Trung Quốc, không gọi được từ Việt Nam. Cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Chương này chỉ tính khoản sức lực và thời gian. Cái được xem là bốn thứ: sự tập trung bạn dùng được mỗi ngày, phản ứng nhanh hay chậm, mắc lỗi nhiều hay ít, và bị ngắt quãng rồi bao lâu mới quay lại được. Phần lớn con số là đo trực tiếp, đến từ thí nghiệm hoặc từ việc theo dõi ghi chép một nhóm người (nghiên cứu đoàn hệ). Các con số này không quy đổi ra tuổi thọ, cũng không quy đổi ra tỷ lệ tử vong. Đa số mục trong chương có mức kiểm chứng B. Lĩnh vực này vốn là vậy, không có nghĩa lời khuyên không đứng vững. Mục 19 nói về điều nên kỳ vọng khi làm việc với công an, bác sĩ, nhân viên quầy giao dịch, dẫn quy định chứ không phải thí nghiệm, nên mức ghi là C. Mục 15 (coi ý nghĩ bi quan là triệu chứng) và mục 22 (coi "người khác đòi hỏi tôi phải hoàn hảo" là triệu chứng) dẫn con số về tử vong và nguy cơ tự sát. Thước đo của chúng khác với các mục còn lại trong chương, nên không đặt lên cùng một cái cân.
 
 Các mục trong chương chia thành các nhóm chủ đề dưới đây, trong ngoặc là số mục.

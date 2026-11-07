@@ -2,6 +2,8 @@
 
 # 9. Legal Red Lines Ordinary People Often Cross (Ranh giới pháp luật người thường dễ phạm)
 
+**Người đọc ở Việt Nam lưu ý:** số 119 và 12356 trong chương là số cứu hỏa và đường dây hỗ trợ tâm lý của Trung Quốc. Ở Việt Nam, có cháy thì gọi 114; cần hỗ trợ tâm lý thì gọi 113 hoặc đến khoa cấp cứu gần nhất, hay khoa tâm thần, tâm lý của bệnh viện.
+
 Chương này tính hai khoản: tự do thân thể của bạn, và tiền của bạn. Những việc dưới đây, người thường hay nghĩ là "chẳng có gì", thực tế sẽ bị tạm giữ, bị phạt tiền, nặng thì còn bị tuyên án hình sự. Mỗi mục đều đưa ra con số cụ thể trong điều luật, và những vụ án đã được kênh chính thức công bố. Luật Xử phạt vi phạm quản lý trật tự trị an mà chương này dẫn là bản sửa đổi năm 2025, áp dụng từ ngày 1 tháng 1 năm 2026, số điều khác luật cũ. Bộ luật Hình sự dẫn theo bản hợp nhất "sửa đổi theo Tu chính án XI Bộ luật Hình sự" do Sở Công an thành phố Bắc Kinh đăng lại, trong nội dung sẽ ghi rõ tu chính án tương ứng.
 
 Các mục trong chương chia theo chủ đề thành mấy nhóm dưới đây, trong ngoặc là số mục.

@@ -230,7 +230,7 @@ function main() {
 
     lines.push('---');
     lines.push('');
-    lines.push('Đồng bộ bằng prompt Việc C, sau khi xong cập nhật `tools/mốc-bản-gốc.txt` rồi chạy `node tools/cap-nhat-moi.mjs` để làm mới nhãn "mới thêm / đã sửa" trên trang tra cứu.');
+    lines.push('Đồng bộ bằng prompt Việc C, sau khi xong cập nhật `tools/mốc-bản-gốc.txt` rồi chạy `node tools/cap-nhat-moi.mjs` để làm mới nhãn "mới thêm / đã sửa" trên trang tra cứu. Giữ nguyên các đoạn "Người đọc ở Việt Nam lưu ý" ở đầu chương khi đồng bộ.');
     lines.push('');
 
     const body = lines.join('\n');

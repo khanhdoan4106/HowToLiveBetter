@@ -2,6 +2,8 @@
 
 # 24. Seeing a Doctor: Spend Less, Avoid Detours (Khám bệnh: đỡ tốn tiền, đỡ đi đường vòng)
 
+**Người đọc ở Việt Nam lưu ý:** số 120 trong chương là số cấp cứu của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu; 115 vẫn gọi được ở nhiều nơi trong giai đoạn chuyển tiếp.
+
 Cách tính: tiền và thời gian. Chương này nói việc khám bệnh đi thế nào: trước hết đến bệnh viện nào, chuyển lên trên ra sao, tiền tiết kiệm được ở đâu. Ngoài ra nói cấp cứu xếp hàng thế nào, chấn thương nặng chữa xong phải làm những giám định nào, làm những giấy tờ nào. Được hưởng khoản gì xem chương 7. Bệnh mạn tính quản lý lâu dài thế nào xem chương 16. Cấp cứu tại hiện trường làm gì trước xem chương 13.
 
 Chương này chủ yếu dựa vào "Một số biện pháp về đẩy nhanh xây dựng hệ thống khám chữa bệnh phân cấp" do Văn phòng Quốc vụ viện ban hành tháng 4 năm 2026. Khám chữa bệnh phân cấp là theo mức nặng nhẹ của bệnh mà quyết định trước hết đến bệnh viện cấp nào. Văn bản này gắn thẳng "đến tuyến cơ sở" với "tiết kiệm tiền". Nhưng tiến độ thực hiện các nơi khác nhau, phần thân bài viết quy tắc ở tầng nhà nước. Cụ thể đến khu vực gom vốn của bạn, lấy cách nói của cơ quan bảo hiểm y tế và y tế địa phương làm chuẩn. Khu vực gom vốn là nơi bạn đóng bảo hiểm y tế, thường là một thành phố.

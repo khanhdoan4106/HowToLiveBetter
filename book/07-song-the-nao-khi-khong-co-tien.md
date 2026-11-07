@@ -2,6 +2,8 @@
 
 # 7. What to Do When You Have No Money (Sống thế nào khi không có tiền)
 
+**Người đọc ở Việt Nam lưu ý:** số 120 và 110 trong chương là số cấp cứu và số công an của Trung Quốc. Ở Việt Nam, gọi 113 khi cần cấp cứu hoặc báo công an; 115 vẫn gọi được ở nhiều nơi trong giai đoạn chuyển tiếp.
+
 Chương này tính tiền và sự bảo đảm: nhận được bao nhiêu tiền, được miễn bao nhiêu, được hưởng dịch vụ gì, cần đủ điều kiện gì, đều viết ở đây, không quy đổi ra tuổi thọ. Chính sách thay đổi hằng năm, mỗi nơi một khác, nên số tiền và ngưỡng điều kiện đều lấy theo mức địa phương bạn ở công bố trong năm đó.
 
 Các mục trong chương chia thành các nhóm chủ đề dưới đây, trong ngoặc là số mục.
